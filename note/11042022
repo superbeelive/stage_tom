@@ -1,0 +1,46 @@
+#Stage Super Bee Live (SBL)
+#Jour 1 
+## Instalation 
+Je me présente a l'accueil du CNRS à 9h30. J'ai rendez-vous à 10h00. Une des personne avec les qu'elles je vais travailler, Matthieu Ramos arrive vers 9h45. Matthieu Rousset arrive à 10h15 (quart d'heure montpelliérain) et nous partons visiter le laboratoire de l'IBMM. Celui-ci s'étends sur plusieurs étage et est surtout remplis. En effet il n'y a pas un bureau de vide. On nous presente à different menbre du projet, biologiste, maitre de conference, étudiante et à d'autre stagiaire. 
+Nous rejoignons Nour Aït Kaddour un licence tout à fait sympatique qui nous a aider moi et matthieu à remplir des documents administratifs.
+Nous ne somme donc pour l'instant que 3 stagiaire. 
+Matthieu Ramos master 2 robotique charger du traitement d'image.
+Nour Aït Kaddour Licence charger du site web et de l'affichage des données.
+Quand à moi ma premier mission est de messurer la temperature l'hygrometrie et les vibration aux niveaux d'une gaufre de la ruche.
+
+Mr Rousset nous emmene nous as installer aux niveaux du rucher. Nous avons pu prendre nos marques Matthieu Ramos et moi (Nour aillant due partire pour réviser ses partiel) dans l'algeco ce trouvant à coter des ruche. Dans cellui-ci ce trouve "SuperBeeLive" qui est une ruche plonger dans le noir observer par 8 cameras et eclairé par deux projecteurs infra rouge. 
+Mr Rousset nous explique les différente étapes de vie d'une colonie et les facteurs pouvant la pertuber.
+
+## Resumer connaisance abeille 
+
+De ce que j'ai retenue :
+	- Les abeille qui butine sont conditioner a aller uniquement vers un seul type de fleurs
+	- Les colonie peuvent etre perturber par plusieur facteur :
+		- Les frelon
+		- La mort prématurer d'une reine
+		- Les differente maladie pouvant toucher la ruche.
+	- Une reine c'est une abeille nouris uniquement a la geler royale
+	- Les alveole dans les gaufre peuvent contenire quatre élément :
+		- Du polen
+		- Du miel
+		- Des larves
+		- Une abeille qui vas réchaufer les alvéole au tour.
+	- On as donc different types de polen que l'on peut differencier
+
+## Objectife SBL
+
+L'objectif est de faire une études sérieuse ou tout les paramétre sont controler. Le bute est donc d'introduire une colonie saine dans SBL et d'ensuite la contaminer, la perturber, la déstabilier et d'étudier les données récolter. Ceux-ci permetrons de déterminer des paterne montrant qu'une colonie vas mal.
+Un autre aspect écologique c'est présenter pour le projet quand on c'est rendue compte d'importance du type de polen.
+
+## Fin de journées
+Nous somme resté travailler de 13h00 à 15h45. Durant ce lapse de temps j'ai réaliser les taches suivantes :
+
+	- Réponse aux mail D'Olivia Serenelli-Pesin pour le sujet de mon stage
+	- Débuts de réflexion sur les différents choix possible entre les capteurs d'hygro et de température
+	- Recherche sur la vibration
+	- Recherche sur la série de Fourier
+	- Renvoie du mail pour les badge (mauvaise addresse le matin)
+
+A 15H45 Mr Rousset est revenue avec Oanna. Une Master 1 d'Ingénerie Bio-moléculaire et nanobiotechnologie.
+
+EOD
