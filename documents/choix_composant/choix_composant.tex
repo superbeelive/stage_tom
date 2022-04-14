@@ -15,7 +15,7 @@
 
 \section{Introduction}
 
-Le but de ce document est de mettre par ecris les possibiliter en ce qui concerne les composant pour la premier partie du stage. L'objectif de cette premier partie est le suivant (Extrait ordre de mission).\\ 
+Le but de ce document est de mettre par ecris les possibiliter en ce qui concerne les composant pour la premier partie du stage. Ceux ci ne sont pas defintife et pouront changer tout aux long de la mission. L'objectif de cette premier partie est le suivant (Extrait ordre de mission).\\ 
 \\
 Nous avons besoin de mettre en place une première installation avec un microcontroleur et
 des capteurs dans la ruche afin de faire un "proof of concept" simple pour pouvoir afficher les
@@ -28,7 +28,8 @@ Elles devront être remontées en MQTT sur un serveur déjà mis en place.
 Le tout doit être opérationnel (fonctionnel et dans la ruche) avant le 15 Mai 2022).
 \\
 \\
-Danc ce document je commencerait par présenter les differente possibilité aux niveaux des micro-controleur. Ensuite j'évoquerait les model disponible des capteur d'hygrometrie et de température. Enfin je reviendrais sur le cas du capteur de vibration.
+Je dois donc concevoire un prototype rapidement afin de répondre aux besoins ennoncer ci-dessus.
+Danc ce document vous présenterait les choix fait lors de la premier semaine. Nous commenceront pas voire les differentes possibilité aux niveaux des micro-controleur. Ensuite j'évoquerait les modelles des capteur d'hygrometrie et de température. Enfin je reviendrais sur le cas du capteur de vibration.
 
 \newpage{}
 \section{Choix des composant}
@@ -40,19 +41,41 @@ Le micro controleur doit pouvoire :
 	- Mise en place rapide et facile
 
 De ces trois critéres j'ai trouver deux solution possible. 
-Tout d'abords un arduino muni d'un shield ethernet avec poe pourait nous permetre dans un premier temps d'avoire un systeme alimenter et connecté à internet. 
-En second temps j'ai pensé à un Esp32 qui permetrait de faire transiter les données en Wifi. 
-Etant familiariser avec les deux solution je n'ai pas de préférence.
+Tout d'abords un arduino muni d'un shield ethernet pourrait nous permetre dans un premier temps d'avoire un systeme connecté.
+En second temps j'ai pensé à un Esp32 qui permetrait de faire transiter les données en Wifi et qui est plus petits. 
+Etant familiariser avec les deux solution je n'ai pas de préférence. J'ai cependant commencer à travailler sur l'arduino.
 
 \subsection{Capteur de température et d'hygrométrie }
-Pour le capteurs d'humiditer et de température
-J'ai déjà eux l'occasion d'utiliser plusieurs model du capteur de température.
+Pour répondre à ce besoins j'ai opter pour un Si7021. J'ai fait ce choix car le capteur était directement a disposition et que je l'avais déja programmer. Ces caracteristique sont les suivante :
 
+\\
+Température :\\
+\begin{center}
+    \begin{tabular}{|l|l|}
+	\hline
+	    Plage de valeur & Résolution \\
+	\hline
+	    -40C - 125C & 0,4C \\
+	\hline
+    \end{tabular}
+\end{center}
+
+
+Huniditer:\\
+\begin{center}
+    \begin{tabular}{|l|l|}
+	\hline
+	    Plage de valeur & Résolution \\
+	\hline
+	    0\% - 80\% & 0,3\% \\
+	\hline
+    \end{tabular}
+\end{center}
 
 \subsection{Capteur de vibration}
-
+Le capteur de vibration était la partie que je connaisait pas du tout sur le projet. Je me suis donc rapporcher des Monsieur Druon qui ma fournie deux solution différente. Un capteur piezo-electrique et un microphone. Lors de cette premier semaine 
 piezo can amplificationm instrumentation
-https://fr.wikipedia.org/wiki/Amplificateur_de_mesure
+https://fr.wikipedia.org/wiki/Amplificateur\_de\_mesure
 
 %\end{lstlisting}
 %\begin{center}

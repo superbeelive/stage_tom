@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.4.12)  12 APR 2022 12:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.4.12)  14 APR 2022 11:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -234,7 +234,7 @@ File: l3backend-pdftex.def 2021-12-14 L3 backend support: PDF output (pdfTeX)
 LaTeX Warning: Unused global option(s):
     [5pt].
 
-No file choix_composant.aux.
+(./choix_composant.aux)
 \openout1 = `choix_composant.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -256,6 +256,7 @@ LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 \c@lstlisting=\count276
+
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count277
@@ -294,6 +295,8 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 13.
 LaTeX Info: Redefining \pageref on input line 13.
 LaTeX Info: Redefining \nameref on input line 13.
+
+(./choix_composant.out) (./choix_composant.out)
 \@outlinefile=\write3
 \openout3 = `choix_composant.out'.
 
@@ -304,44 +307,68 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 15.
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--32
+Underfull \hbox (badness 10000) in paragraph at lines 18--33
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--32
+Underfull \hbox (badness 10000) in paragraph at lines 18--33
 
  []
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-(./choix_composant.aux)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
-Package rerunfilecheck Warning: File `choix_composant.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+! LaTeX Error: There's no line here to end.
 
-Package rerunfilecheck Info: Checksums for `choix_composant.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  694D8BAD785F4AEA66A47CE430AEB302;820.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.52 T
+      empérature :\\
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 54.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 54.
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+
+ []
+
+
+Overfull \hbox (75.0065pt too wide) in paragraph at lines 76--78
+\OT1/cmr/m/n/10 piezo can am-pli-fi-ca-tionm in-stru-men-ta-tion https://fr.wik
+ipedia.org/wiki/Amplificateur[]de[]mesure 
+ []
+
+[2] (./choix_composant.aux)
+Package rerunfilecheck Info: File `choix_composant.out' has not changed.
+(rerunfilecheck)             Checksum: 694D8BAD785F4AEA66A47CE430AEB302;820.
  ) 
 Here is how much of TeX's memory you used:
- 9601 strings out of 478353
- 148941 string characters out of 5854635
- 450004 words of memory out of 5000000
- 27637 multiletter control sequences out of 15000+600000
+ 9616 strings out of 478353
+ 149179 string characters out of 5854635
+ 451254 words of memory out of 5000000
+ 27646 multiletter control sequences out of 15000+600000
  407377 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,6n,63p,286b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,7n,63p,338b,323s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmr17.pfb>
-Output written on choix_composant.pdf (2 pages, 58465 bytes).
+Output written on choix_composant.pdf (2 pages, 61946 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
- 31 compressed objects within 1 object stream
+ 60 PDF objects out of 1000 (max. 8388607)
+ 47 compressed objects within 1 object stream
  8 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
