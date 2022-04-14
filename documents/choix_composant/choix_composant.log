@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.4.12)  14 APR 2022 11:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.4.12)  14 APR 2022 14:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -319,56 +319,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--33
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.52 T
-      empérature :\\
-? 
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
+Underfull \hbox (badness 10000) in paragraph at lines 49--51
 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 54.
+(Font)              <7> on input line 52.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 54.
+(Font)              <5> on input line 52.
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
 
-Overfull \hbox (75.0065pt too wide) in paragraph at lines 76--78
-\OT1/cmr/m/n/10 piezo can am-pli-fi-ca-tionm in-stru-men-ta-tion https://fr.wik
-ipedia.org/wiki/Amplificateur[]de[]mesure 
+Underfull \hbox (badness 10000) in paragraph at lines 74--78
+
  []
 
 [2] (./choix_composant.aux)
-Package rerunfilecheck Info: File `choix_composant.out' has not changed.
-(rerunfilecheck)             Checksum: 694D8BAD785F4AEA66A47CE430AEB302;820.
+
+Package rerunfilecheck Warning: File `choix_composant.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `choix_composant.out':
+(rerunfilecheck)             Before: 9814C2D956916ADB9290ECA4E25C967A;103
+(rerunfilecheck)             After:  694D8BAD785F4AEA66A47CE430AEB302;820.
  ) 
 Here is how much of TeX's memory you used:
- 9616 strings out of 478353
- 149179 string characters out of 5854635
- 451254 words of memory out of 5000000
- 27646 multiletter control sequences out of 15000+600000
+ 9611 strings out of 478353
+ 149102 string characters out of 5854635
+ 451255 words of memory out of 5000000
+ 27641 multiletter control sequences out of 15000+600000
  407377 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,7n,63p,338b,323s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,7n,63p,425b,323s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmr17.pfb>
-Output written on choix_composant.pdf (2 pages, 61946 bytes).
+Output written on choix_composant.pdf (2 pages, 61395 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+ 48 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
  8 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 9 words of extra memory for PDF output out of 10000 (max. 10000000)
 
