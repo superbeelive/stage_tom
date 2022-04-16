@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.16)  16 APR 2022 17:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.16)  17 APR 2022 00:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -180,9 +180,27 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
 \Hy@SectionHShift=\skip51
+) (C:\Users\tomtu\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+ (C:\Users\tomtu\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen151
+\captionmargin=\dimen152
+\caption@leftmargin=\dimen153
+\caption@rightmargin=\dimen154
+\caption@width=\dimen155
+\caption@indent=\dimen156
+\caption@parindent=\dimen157
+\caption@hangindent=\dimen158
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count277
+\c@continuedfloat=\count278
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
 ) (C:\Users\tomtu\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count277
+\l__color_backend_stack_int=\count279
 \l__pdf_internal_box=\box54
 )
 
@@ -192,37 +210,37 @@ LaTeX Warning: Unused global option(s):
 (rapport_S11042022.aux)
 \openout1 = `rapport_S11042022.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-\c@lstlisting=\count278
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+\c@lstlisting=\count280
  (C:\Users\tomtu\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count279
-\scratchdimen=\dimen151
+\scratchcounter=\count281
+\scratchdimen=\dimen159
 \scratchbox=\box55
-\nofMPsegments=\count280
-\nofMParguments=\count281
+\nofMPsegments=\count282
+\nofMParguments=\count283
 \everyMPshowfont=\toks19
-\MPscratchCnt=\count282
-\MPscratchDim=\dimen152
-\MPnumerator=\count283
-\makeMPintoPDFobject=\count284
+\MPscratchCnt=\count284
+\MPscratchDim=\dimen160
+\MPnumerator=\count285
+\makeMPintoPDFobject=\count286
 \everyMPtoPDFconversion=\toks20
 ) (C:\Users\tomtu\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -230,7 +248,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\tomtu\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 13.
+Package hyperref Info: Link coloring OFF on input line 15.
  (C:\Users\tomtu\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (C:\Users\tomtu\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
@@ -238,68 +256,125 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (C:\Users\tomtu\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count285
+\c@section@level=\count287
 )
-LaTeX Info: Redefining \ref on input line 13.
-LaTeX Info: Redefining \pageref on input line 13.
-LaTeX Info: Redefining \nameref on input line 13.
+LaTeX Info: Redefining \ref on input line 15.
+LaTeX Info: Redefining \pageref on input line 15.
+LaTeX Info: Redefining \nameref on input line 15.
  (rapport_S11042022.out) (rapport_S11042022.out)
 \@outlinefile=\write3
 \openout3 = `rapport_S11042022.out'.
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 15.
+(Font)              <12> on input line 17.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 15.
+(Font)              <8> on input line 17.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 15.
+(Font)              <6> on input line 17.
+<interieur_rucher.jpg, id=51, 4175.6pt x 3131.7pt>
+File: interieur_rucher.jpg Graphic file (type jpg)
+<use interieur_rucher.jpg>
+Package pdftex.def Info: interieur_rucher.jpg  used on input line 30.
+(pdftex.def)             Requested size: 334.05482pt x 250.54112pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--45
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 30--45
-
- []
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 31.
+See the caption package documentation for explanation.
 
 [1
 
-{C:/Users/tomtu/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 61--63
+{C:/Users/tomtu/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+<exterieur_rucher.jpg, id=61, 4175.6pt x 3131.7pt>
+File: exterieur_rucher.jpg Graphic file (type jpg)
+<use exterieur_rucher.jpg>
+Package pdftex.def Info: exterieur_rucher.jpg  used on input line 33.
+(pdftex.def)             Requested size: 334.05482pt x 250.54112pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 34.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--59
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--59
+
+ []
+
+[2 <./interieur_rucher.jpg> <./exterieur_rucher.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 76--78
+
+ []
+
+[3]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 64.
+(Font)              <7> on input line 79.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 64.
+(Font)              <5> on input line 79.
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--90
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
-[3] (rapport_S11042022.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--107
+
+ []
+
+<montage_piezo_aop.jpg, id=73, 4015.0pt x 2258.4375pt>
+File: montage_piezo_aop.jpg Graphic file (type jpg)
+<use montage_piezo_aop.jpg>
+Package pdftex.def Info: montage_piezo_aop.jpg  used on input line 119.
+(pdftex.def)             Requested size: 321.20656pt x 180.6787pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 120.
+See the caption package documentation for explanation.
+
+[4]
+<sortie_osciloscope.jpg, id=78, 4015.0pt x 2258.4375pt>
+File: sortie_osciloscope.jpg Graphic file (type jpg)
+<use sortie_osciloscope.jpg>
+Package pdftex.def Info: sortie_osciloscope.jpg  used on input line 122.
+(pdftex.def)             Requested size: 321.20656pt x 180.6787pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 123.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--143
+
+ []
+
+[5 <./montage_piezo_aop.jpg> <./sortie_osciloscope.jpg>] [6] (rapport_S11042022.lof)
+\tf@lof=\write4
+\openout4 = `rapport_S11042022.lof'.
+
+ [7] (rapport_S11042022.aux)
 Package rerunfilecheck Info: File `rapport_S11042022.out' has not changed.
-(rerunfilecheck)             Checksum: DF95D62028FE7EF5D5310176E5C0242B;1410.
+(rerunfilecheck)             Checksum: ED1990419EBA11B30B6400BDDDEA43A6;1845.
  ) 
 Here is how much of TeX's memory you used:
- 9589 strings out of 478582
- 151847 string characters out of 2844344
- 446822 words of memory out of 3000000
- 27672 multiletter control sequences out of 15000+600000
+ 10924 strings out of 478582
+ 178083 string characters out of 2844344
+ 466386 words of memory out of 3000000
+ 28981 multiletter control sequences out of 15000+600000
  473514 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,7n,63p,499b,322s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 60i,7n,63p,393b,527s stack positions out of 10000i,1000n,20000p,200000b,80000s
 <C:/Users/tomtu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/tomtu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tomtu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/tomtu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/tomtu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on rapport_S11042022.pdf (3 pages, 86733 bytes).
+Output written on rapport_S11042022.pdf (7 pages, 12936174 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 13 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 129 PDF objects out of 1000 (max. 8388607)
+ 25 named destinations out of 1000 (max. 500000)
+ 117 words of extra memory for PDF output out of 10000 (max. 10000000)
 
