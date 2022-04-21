@@ -1,12 +1,5 @@
-* Title: Circuit
-
-* Netlist
-V1 1 0 100V
-R1 1 2 10
-R2 2 0 10
-
-*Control commands
-.control
-op
-print v(1) v(2) v(1,2) i(v1)
-.endc
+voltage divider netlist
+V1 a 0 1
+R1 a b 1k
+R2 b 0 2k
+.end
