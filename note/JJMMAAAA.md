@@ -1,5 +1,4 @@
-#Stage Super Bee Live (SBL)
-#Jour XX
+# Stage Super Bee Live (SBL)
 
 ## Matiner 
 
