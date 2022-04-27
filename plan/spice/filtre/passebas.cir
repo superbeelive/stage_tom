@@ -1,8 +1,5 @@
 .exercice 2 
-Vin in 0 dc 0 ac 1 sin(0 1m 500)
-R1 int in 10k
-R2 out int 1k
-C1 int 0 1u
-C2 out 0 400n
-
+Vin in 0 dc 0 ac 1 sin(0 1m 50)
+l1 in out 3
+R1 out 0 1k
 .end
