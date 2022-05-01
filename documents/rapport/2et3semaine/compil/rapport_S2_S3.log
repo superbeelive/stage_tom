@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.5.1)  1 MAY 2022 18:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.5.1)  1 MAY 2022 22:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -665,9 +665,19 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 150.
 See the caption package documentation for explanation.
 
+<../img/frotment.jpg, id=180, 741.23077pt x 472.53462pt>
+File: ../img/frotment.jpg Graphic file (type jpg)
+<use ../img/frotment.jpg>
+Package pdftex.def Info: ../img/frotment.jpg  used on input line 155.
+(pdftex.def)             Requested size: 370.61447pt x 236.26672pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 156.
+See the caption package documentation for explanation.
+
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 150.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 156.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -678,22 +688,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-11.97728pt}.
 
 [7 <../img/mtgfinal.png> <../img/plat.jpg>]
-<../img/frotment.jpg, id=191, 741.23077pt x 472.53462pt>
-File: ../img/frotment.jpg Graphic file (type jpg)
-<use ../img/frotment.jpg>
-Package pdftex.def Info: ../img/frotment.jpg  used on input line 155.
-(pdftex.def)             Requested size: 370.61447pt x 236.26672pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 156.
-See the caption package documentation for explanation.
-
 <../img/froty.jpg, id=192, 4015.0pt x 2258.4375pt>
 File: ../img/froty.jpg Graphic file (type jpg)
 <use ../img/froty.jpg>
 Package pdftex.def Info: ../img/froty.jpg  used on input line 161.
 (pdftex.def)             Requested size: 401.52353pt x 225.85698pt.
+
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 162.
@@ -820,16 +820,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [12] (./rapport_S2_S3.aux)
 Package rerunfilecheck Info: File `rapport_S2_S3.out' has not changed.
-(rerunfilecheck)             Checksum: 278E0EB16C2FB931A596C548664D242A;1393.
+(rerunfilecheck)             Checksum: E6F771750C90210B9C98D933D8DC78DD;1399.
  ) 
 Here is how much of TeX's memory you used:
  10986 strings out of 479304
  169092 string characters out of 5869780
- 514829 words of memory out of 5000000
+ 514831 words of memory out of 5000000
  27951 multiletter control sequences out of 15000+600000
  414688 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,15n,74p,467b,486s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,16n,74p,478b,535s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf/
 fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/c
 m-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb
@@ -838,7 +838,7 @@ onts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm
 -super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
 </usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fo
 nts/type1/public/cm-super/sfrm1728.pfb>
-Output written on rapport_S2_S3.pdf (12 pages, 4537945 bytes).
+Output written on rapport_S2_S3.pdf (12 pages, 4539224 bytes).
 PDF statistics:
  281 PDF objects out of 1000 (max. 8388607)
  233 compressed objects within 3 object streams

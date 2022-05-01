@@ -5,8 +5,8 @@
 \contentsline {subsection}{\numberline {2.2}Fréquence et piezo-electrique}{4}{subsection.2.2}%
 \contentsline {section}{\numberline {3}Simulation}{5}{section.3}%
 \contentsline {subsection}{\numberline {3.1}ngspice}{5}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Apprentisage du logiciel}{5}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Etats actuel}{5}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.2}Apprentissage du logiciel}{5}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Etat actuel}{5}{subsection.3.3}%
 \contentsline {section}{\numberline {4}Capteurs de vibration}{6}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Montage}{6}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}Rappel}{6}{subsubsection.4.1.1}%
@@ -17,7 +17,7 @@
 \contentsline {section}{\numberline {5}Gestion}{9}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Organisation de l'espace }{9}{subsection.5.1}%
 \contentsline {subsubsection}{\numberline {5.1.1}Calendrier}{9}{subsubsection.5.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.2}Liste des taches}{9}{subsubsection.5.1.2}%
-\contentsline {subsubsection}{\numberline {5.1.3}Description des taches}{10}{subsubsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.2}Liste des tâches}{9}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.3}Description des tâches}{10}{subsubsection.5.1.3}%
 \contentsline {subsubsection}{\numberline {5.1.4}Gantt}{10}{subsubsection.5.1.4}%
 \contentsline {section}{\numberline {6}Conclusion}{11}{section.6}%
