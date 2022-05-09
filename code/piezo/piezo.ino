@@ -1,5 +1,5 @@
 int piezo = 0;
-
+//https://www.geeksforgeeks.org/file-transfer-protocol-ftp-in-application-layer/?ref=lbp
 void setup() {
 	Serial.begin(9600);
 	pinMode(piezo,INPUT);
@@ -13,7 +13,7 @@ void loop() {
 	delay(500);
 }
 
-
+/*
 byte sine_data [91]=
  {
 0,  
@@ -33,7 +33,7 @@ float f_peaks[5]; // top 5 frequencies peaks in descending order
 
 float FFT(int in[],int N,float Frequency)
 {
-/*
+
 Code to perform FFT on arduino,
 setup:
 paste sine_data [91] at top of program [global variable], paste FFT function at end of program
@@ -50,7 +50,7 @@ Code by ABHILASH
 Contact: abhilashpatel121@gmail.com 
 Documentation:https://www.instructables.com/member/abhilash_patel/instructables/
 2/3/2021: change data type of N from float to int for >=256 samples
-*/
+
 
 unsigned int data[13]={1,2,4,8,16,32,64,128,256,512,1024,2048};
 int a,c1,f,o,x;
@@ -124,11 +124,11 @@ float e,c,s,tr,ti;
         {
          out_r[i]=sqrt(out_r[i]*out_r[i]+out_im[i]*out_im[i]); // to  increase the speed delete sqrt
          out_im[i]=i*Frequency/N;
-         /*
+         
          Serial.print(out_im[i]); Serial.print("Hz");
          Serial.print("\t");                            // un comment to print freuency bin    
          Serial.println(out_r[i]); 
-         */    
+             
         }
 
 
@@ -193,4 +193,4 @@ float cosine(int i)
   else if(j>180 && j<271){out= -sine_data[270-j];}
   else if(j>270 && j<361){out= sine_data[j-270];}
   return (out/255);
-}
+} */
