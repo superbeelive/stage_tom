@@ -7,18 +7,20 @@
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <netinet/in.h>
+#include <time.h>
 	
 #define PORT	 8888
-#define MAXLINE 1024
+#define MAXLINE 2048
 	
 // Driver code
 int main() {
-	int sockfd;
+	srand(time(NULL));
+	int sockfd,n,y,i,len;
 	char buffer[MAXLINE];
-	char *hello = "Hello from client";
-	struct sockaddr_in	 servaddr;
+        char charValues[80], tmp[20][4];
+	struct sockaddr_in servaddr;
+	double values[20];
 	
-	// Creating socket file descriptor
 	if ( (sockfd = socket(AF_INET, SOCK_DGRAM, 0)) < 0 ) {
 		perror("socket creation failed");
 		exit(EXIT_FAILURE);
@@ -26,23 +28,25 @@ int main() {
 	
 	memset(&servaddr, 0, sizeof(servaddr));
 		
-	// Filling server information
 	servaddr.sin_family = AF_INET;
 	servaddr.sin_port = htons(PORT);
 	servaddr.sin_addr.s_addr = INADDR_ANY;
 		
-	int n, len;
-		
-	sendto(sockfd, (const char *)hello, strlen(hello),
-		MSG_CONFIRM, (const struct sockaddr *) &servaddr,
-			sizeof(servaddr));
-	printf("Hello message sent.\n");
+	for(i=0;i<20;i++){
+		double dec,cent;
+		dec = rand()%10;
+		cent = rand()%10;
+		values[i]= rand()%10+(dec/10)+(cent/100);
+		printf("%f",values[i]);	
+		sprintf(tmp[i],"%1.2f",values[i]);
+	}
+
+	sendto(sockfd, (const char *)tmp[0], strlen(tmp[0]),MSG_CONFIRM, (const struct sockaddr *) &servaddr,sizeof(servaddr));
+	printf("Values send.\n");
 			
-	n = recvfrom(sockfd, (char *)buffer, MAXLINE,
-				MSG_WAITALL, (struct sockaddr *) &servaddr,
-				&len);
+	n = recvfrom(sockfd, (char *)buffer, MAXLINE,MSG_WAITALL, (struct sockaddr *) &servaddr,&len);
 	buffer[n] = '\0';
-	printf("Server : %s\n", buffer);
+	printf("Serveur : %s\n", buffer);
 	
 	close(sockfd);
 	return 0;

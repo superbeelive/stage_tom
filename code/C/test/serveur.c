@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <complex.h>
+#include <fftw3.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
@@ -9,15 +11,18 @@
 //#include <arduinoUDP.h>
 
 #define PORT	 8888
-#define MAXLINE 1024
+#define MAXLINE 2048
+
+void traitementData(double * valeurs, char * charData, int taille, int nbChar);
 
 
 int main (){
-    	printf("Début du programme. \n");
+
+	printf("Début du programme. \n");
 	int sockfd;
 	char buffer[MAXLINE];
 	struct sockaddr_in servaddr, cliaddr;
-
+	double data[20];
 	if ( (sockfd = socket(AF_INET, SOCK_DGRAM, 0)) < 0 ) {
 		perror("Erreur lors de la creation de la socket");
 		exit(EXIT_FAILURE);
@@ -40,13 +45,25 @@ int main (){
 
 	len = sizeof(cliaddr); //len is value/result
 	for(;;){
-		n = recvfrom(sockfd, (char *)buffer, MAXLINE,
-				MSG_WAITALL, ( struct sockaddr *) &cliaddr,
-				&len);
+		n = recvfrom(sockfd, (char *)buffer, MAXLINE,MSG_WAITALL, ( struct sockaddr *) &cliaddr,&len);
 		buffer[n] = '\0';
 		printf("Client : %s\n", buffer);
-		sendto(sockfd, "ACK", strlen("ACK"),MSG_CONFIRM, (const struct sockaddr *) 		 &cliaddr,sizeof(cliaddr));
+		traitementData(data,buffer,20,4);
+		sendto(sockfd, "ACK", strlen("ACK"),MSG_CONFIRM, (const struct sockaddr *)&cliaddr,sizeof(cliaddr));
+	
 	}
 	return 0;
 }
 
+void traitementData(double * valeurs, char * charData, int taille, int nbChar){
+	int i,y;
+	char tmp[4];
+	printf("\n");
+	for(i=0;i<taille;i++){
+		for(y=0;y<nbChar;y++)
+			tmp[y]=charData[(i*nbChar)+y];
+		valeurs[i]=atof(tmp);
+		printf("%f ",valeurs[i]);
+	}
+	printf("\n ");
+}
