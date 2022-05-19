@@ -11,7 +11,7 @@
 #define NBECH 20
 int piezo = 0;
 
-IPAddress ip_device(10, 24, 4, 129) ;
+IPAddress ip_device(172, 42, 20, 127) ;
 byte mac [6] = {0x54, 0x34, 0x41, 0x42, 0x30, 0x35};
 
 unsigned int localPort = 8888;
@@ -82,7 +82,7 @@ void loop() {
 		}	
 	}
 
-	Udp.beginPacket("10.24.4.127",8888);
+	Udp.beginPacket(ipMqtt,8888);
 	Udp.write(data2);
 	Udp.endPacket();
 
