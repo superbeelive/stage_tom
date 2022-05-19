@@ -7,11 +7,12 @@
 #include <Ethernet.h>
 #include <Adafruit_Si7021.h>
 #define PORT_MQTT 1883
-
+#define NBCHAR 5
+#define NBECH 20
 int piezo = 0;
 
 IPAddress ip_device(10, 24, 4, 129) ;
-byte mac [6] = {0x54, 0x34, 0x41, 0x30, 0x30, 0x31};
+byte mac [6] = {0x54, 0x34, 0x41, 0x42, 0x30, 0x35};
 
 unsigned int localPort = 8888;
 
@@ -35,58 +36,49 @@ PubSubClient client(ipMqtt,PORT_MQTT,callback,ethclient);
 
 void setup() {
    Serial.begin(9600);
- if (!sensor.begin()) {
-    Serial.println("Did not find Si7021 sensor!");
-    while (true)
-      ;
-  }
- Serial.println(F("Initialize System"));
- Ethernet.begin(mac, ip_device);
- while (!Ethernet.begin(mac)) {
-   Serial.println(F("failed. Retrying in 1 seconds."));
-   delay(1000);
- }
- 
- pinMode(piezo,INPUT);
- Udp.begin(localPort);
- pinMode(2, OUTPUT);
- Serial.println(F("W5100 initialized"));
- Serial.print(F("IP Address: "));
- Serial.println(Ethernet.localIP());
- client.connect("arduino");
+   sensor.begin();
+   Serial.println(F("Initialize System"));
+   Ethernet.begin(mac, ip_device);
+   Udp.begin(localPort);
+   pinMode(piezo,INPUT);
+   pinMode(2, OUTPUT);
+   Serial.println(F("W5100 initialized"));
+   Serial.print(F("IP Address: "));
+   Serial.println(Ethernet.localIP());
+   client.connect("arduino");
 }
 
 void loop() {
   double hum,temp;
-  char Ctemp[4];
-  char Chum[4];
+  char Ctemp[3];
+  char Chum[3];
   hum = sensor.readHumidity();
   temp = sensor.readTemperature();
-  dtostrf(temp,2,2,Ctemp);
-  dtostrf(hum,2,2,Chum);
+  dtostrf(temp,3,3,Ctemp);
+  dtostrf(hum,3,3,Chum);
   Serial.println(Ctemp);
-  if(!client.publish("topic",Ctemp)){
+  /*if(!client.publish("cadre2Temp",Ctemp)){
      Serial.println("error");
   }
-  if(!client.publish("topic",Chum)){
+  if(!client.publish("cadre2Hum",Chum)){
      Serial.println("error");
-  }
+  }*/
 	// ENVOIE MQTT PIEZO
-	char tmp[20][4];
-	char data2[80];
-	double centsValeurs[20];
+	char tmp[NBECH][NBCHAR];
+	char data2[NBECH*NBCHAR];
+	double centsValeurs[NBECH];
 	int i,y;
-	for(i=0;i<20;i++){
+	for(i=0;i<NBECH;i++){
 		centsValeurs[i]=analogRead(piezo);
 		centsValeurs[i]=(centsValeurs[i]*5)/1023;
 		delay(20);
 	}
 	delay(2000);
-	for(i=0;i<20;i++){
-		dtostrf(centsValeurs[i],4,2,tmp[i]);
-		for(y=0;y<4;y++){
-			data2[(4*i)+y]=tmp[i][y];
-			Serial.println(data2[(i*4)+y]);	
+	for(i=0;i<NBECH;i++){
+		dtostrf(centsValeurs[i],NBCHAR,NBCHAR,tmp[i]);
+		for(y=0;y<NBCHAR;y++){
+			data2[(NBCHAR*i)+y]=tmp[i][y];
+			Serial.println(data2[(i*NBCHAR)+y]);	
 		}	
 	}
 
