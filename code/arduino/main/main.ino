@@ -12,6 +12,7 @@
 int piezo = 0;
 
 IPAddress ip_device(172, 42, 20, 127) ;
+IPAddress ip_dest(172, 42, 20, 126) ;
 byte mac [6] = {0x54, 0x34, 0x41, 0x42, 0x30, 0x35};
 
 unsigned int localPort = 8888;
@@ -38,7 +39,7 @@ void setup() {
    Serial.begin(9600);
    sensor.begin();
    Serial.println(F("Initialize System"));
-   Ethernet.begin(mac, ip_device);
+   Ethernet.begin(mac);
    Udp.begin(localPort);
    pinMode(piezo,INPUT);
    pinMode(2, OUTPUT);
@@ -49,7 +50,7 @@ void setup() {
 }
 
 void loop() {
-  double hum,temp;
+  /*double hum,temp;
   char Ctemp[3];
   char Chum[3];
   hum = sensor.readHumidity();
@@ -57,7 +58,7 @@ void loop() {
   dtostrf(temp,3,3,Ctemp);
   dtostrf(hum,3,3,Chum);
   Serial.println(Ctemp);
-  /*if(!client.publish("cadre2Temp",Ctemp)){
+ if(!client.publish("cadre2Temp",Ctemp)){
      Serial.println("error");
   }
   if(!client.publish("cadre2Hum",Chum)){
@@ -73,16 +74,17 @@ void loop() {
 		centsValeurs[i]=(centsValeurs[i]*5)/1023;
 		delay(20);
 	}
+
 	delay(2000);
 	for(i=0;i<NBECH;i++){
-		dtostrf(centsValeurs[i],NBCHAR,NBCHAR,tmp[i]);
+		dtostrf(centsValeurs[i],3,3,tmp[i]);
 		for(y=0;y<NBCHAR;y++){
 			data2[(NBCHAR*i)+y]=tmp[i][y];
 			Serial.println(data2[(i*NBCHAR)+y]);	
 		}	
 	}
 
-	Udp.beginPacket(ipMqtt,8888);
+	Udp.beginPacket(ip_dest,localPort);
 	Udp.write(data2);
 	Udp.endPacket();
 
