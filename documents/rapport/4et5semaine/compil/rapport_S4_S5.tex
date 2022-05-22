@@ -20,6 +20,75 @@
 \usepackage{lastpage}
 \pagestyle{fancy}
 
+\definecolor{darkWhite}{rgb}{0.94,0.94,0.94}
+
+\lstset{
+  aboveskip=3mm,
+  belowskip=-2mm,
+  backgroundcolor=\color{darkWhite},
+  basicstyle=\footnotesize,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  commentstyle=\color{red},
+  deletekeywords={...},
+  escapeinside={\%*}{*)},
+  extendedchars=true,
+  framexleftmargin=16pt,
+  framextopmargin=3pt,
+  framexbottommargin=6pt,
+  frame=tb,
+  keepspaces=true,
+  keywordstyle=\color{blue},
+  language=C,
+  literate=
+  {²}{{\textsuperscript{2}}}1
+  {⁴}{{\textsuperscript{4}}}1
+  {⁶}{{\textsuperscript{6}}}1
+  {⁸}{{\textsuperscript{8}}}1
+  {€}{{\euro{}}}1
+  {é}{{\'e}}1
+  {è}{{\`{e}}}1
+  {ê}{{\^{e}}}1
+  {ë}{{\¨{e}}}1
+  {É}{{\'{E}}}1
+  {Ê}{{\^{E}}}1
+  {û}{{\^{u}}}1
+  {ù}{{\`{u}}}1
+  {â}{{\^{a}}}1
+  {à}{{\`{a}}}1
+  {á}{{\'{a}}}1
+  {ã}{{\~{a}}}1
+  {Á}{{\'{A}}}1
+  {Â}{{\^{A}}}1
+  {Ã}{{\~{A}}}1
+  {ç}{{\c{c}}}1
+  {Ç}{{\c{C}}}1
+  {õ}{{\~{o}}}1
+  {ó}{{\'{o}}}1
+  {ô}{{\^{o}}}1
+  {Õ}{{\~{O}}}1
+  {Ó}{{\'{O}}}1
+  {Ô}{{\^{O}}}1
+  {î}{{\^{i}}}1
+  {Î}{{\^{I}}}1
+  {í}{{\'{i}}}1
+  {Í}{{\~{Í}}}1,
+  morekeywords={*,...},
+  numbers=left,
+  numbersep=10pt,
+  numberstyle=\tiny\color{black},
+  rulecolor=\color{black},
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  stepnumber=1,
+  stringstyle=\color{gray},
+  tabsize=4,
+  title=\lstname,
+}
+
+
 \fancyhead[L]{\includegraphics[width=1cm]{../../../logo/SBLlogo.png}}
 \fancyhead[C]{Rapport d'activités semaines du 11 et 18 avril 2022 }
 \fancyhead[R]{ \includegraphics[width=1.2cm]{../../../logo/IUTlogo.png}}
@@ -93,9 +162,7 @@ Comme indiquer précédemment le capteur utiliser pour ces données est le Si702
 
 Adafruit_Si7021 sensor = Adafruit_Si7021();
 
-void callback(char* topic, byte* payload, unsigned int length) {
-}
-
+void callback(char* topic, byte* payload, unsigned int length) {}
 
 void setup() {
    Serial.begin(9600);
@@ -105,24 +172,24 @@ void setup() {
       ;
   }
 }
- 
+
 void loop() {
   double hum,temp;
   char Ctemp[4], Chum[4];
-
   hum = sensor.readHumidity();
   temp = sensor.readTemperature();
-  
   dtostrf(temp,2,2,Ctemp);
   dtostrf(hum,2,2,Chum);
-
  delay(1000);
 }	
 	\end{lstlisting}
 \end{scriptsize}
 
-Les fonction principals de ce programme sont , "sensor.begin" qui initialise la liaisons entre l'Arduino et le capteur.
+Les fonction principals de ce programme sont , "sensor.begin" qui initialise la liaisons entre l'Arduino et le capteur, readHumidity et readTemperature permet comme leurs nom l'indique de récupérer la température et l'humidité messurer par le capteur. Les valeurs retourner par ces deux fonction sont de type "double". Afin de pouvoire les envoyer, je les convertis en chaine de caractère à l'aide de la fonction "dtostrf".
+
 \subsubsection{Capteur de vibration}
+Après avoir amplifier le signal du piézo-électrique, j'ai pu me consacrer aux l'acquisition des données de cellui-ci.
+
 \subsubsection{Traitement des données}
 \subsection{Programmation réseaux}
 \subsubsection{Topologie du réseaux}

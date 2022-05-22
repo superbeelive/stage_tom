@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.5.1)  22 MAY 2022 11:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.5.1)  22 MAY 2022 21:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -366,6 +366,12 @@ Package caption Info: french babel package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+)
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2020-01-29 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count287
@@ -374,28 +380,28 @@ File: l3backend-pdftex.def 2020-01-29 L3 backend support: PDF output (pdfTeX)
 (./rapport_S4_S5.aux)
 \openout1 = `rapport_S4_S5.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Info: Redefining \degres on input line 47.
-LaTeX Info: Redefining \dots on input line 47.
-LaTeX Info: Redefining \up on input line 47.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Info: Redefining \degres on input line 116.
+LaTeX Info: Redefining \dots on input line 116.
+LaTeX Info: Redefining \up on input line 116.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 47.
+(lastpage)             ! on input line 116.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -454,7 +460,7 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count294
-Package hyperref Info: Link coloring OFF on input line 47.
+Package hyperref Info: Link coloring OFF on input line 116.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
@@ -466,9 +472,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count295
 )
-LaTeX Info: Redefining \ref on input line 47.
-LaTeX Info: Redefining \pageref on input line 47.
-LaTeX Info: Redefining \nameref on input line 47.
+LaTeX Info: Redefining \ref on input line 116.
+LaTeX Info: Redefining \pageref on input line 116.
+LaTeX Info: Redefining \nameref on input line 116.
 
 (./rapport_S4_S5.out) (./rapport_S4_S5.out)
 \@outlinefile=\write4
@@ -479,31 +485,31 @@ Package caption Info: End \AtBeginDocument code.
 <../../../logo/IUTlogo.png, id=64, 1284.8pt x 642.4pt>
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 49.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 118.
 (pdftex.def)             Requested size: 113.81102pt x 56.90189pt.
 <../../../logo/UMlogo.png, id=66, 105.2733pt x 107.4414pt>
 File: ../../../logo/UMlogo.png Graphic file (type png)
 <use ../../../logo/UMlogo.png>
-Package pdftex.def Info: ../../../logo/UMlogo.png  used on input line 49.
+Package pdftex.def Info: ../../../logo/UMlogo.png  used on input line 118.
 (pdftex.def)             Requested size: 113.81102pt x 116.16284pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 49.
+(Font)              <12> on input line 118.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 49.
+(Font)              <8> on input line 118.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 49.
+(Font)              <6> on input line 118.
 <../../../logo/LIRMMlogo.png, id=67, 1097.60063pt x 364.36125pt>
 File: ../../../logo/LIRMMlogo.png Graphic file (type png)
 <use ../../../logo/LIRMMlogo.png>
-Package pdftex.def Info: ../../../logo/LIRMMlogo.png  used on input line 49.
+Package pdftex.def Info: ../../../logo/LIRMMlogo.png  used on input line 118.
 (pdftex.def)             Requested size: 113.81102pt x 37.77814pt.
 <../../../logo/IBMMlogo.jpg, id=68, 175.6161pt x 75.4017pt>
 File: ../../../logo/IBMMlogo.jpg Graphic file (type jpg)
 <use ../../../logo/IBMMlogo.jpg>
-Package pdftex.def Info: ../../../logo/IBMMlogo.jpg  used on input line 50.
+Package pdftex.def Info: ../../../logo/IBMMlogo.jpg  used on input line 119.
 (pdftex.def)             Requested size: 113.81102pt x 48.8667pt.
 
-Overfull \hbox (149.52858pt too wide) in paragraph at lines 49--51
+Overfull \hbox (149.52858pt too wide) in paragraph at lines 118--120
 [][]   []   
  []
 
@@ -521,11 +527,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 <../../../logo/SBLlogo.png, id=95, 393.1488pt x 274.98735pt>
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 53.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 122.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 53.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 122.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 
@@ -537,42 +543,42 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-11.97728pt}.
 
 [2 <../../../logo/SBLlogo.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--66
+Underfull \hbox (badness 10000) in paragraph at lines 133--135
 
  []
 
 <../img/SMG.png, id=109, 953.81343pt x 420.82219pt>
 File: ../img/SMG.png Graphic file (type png)
 <use ../img/SMG.png>
-Package pdftex.def Info: ../img/SMG.png  used on input line 67.
+Package pdftex.def Info: ../img/SMG.png  used on input line 136.
 (pdftex.def)             Requested size: 476.90555pt x 210.41057pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 68.
+(caption)                particular \caption on input line 137.
 See the caption package documentation for explanation.
 
 <../img/RC.png, id=111, 4015.0pt x 2258.4375pt>
 File: ../img/RC.png Graphic file (type png)
 <use ../img/RC.png>
-Package pdftex.def Info: ../img/RC.png  used on input line 76.
+Package pdftex.def Info: ../img/RC.png  used on input line 145.
 (pdftex.def)             Requested size: 401.52353pt x 225.85698pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 77.
+(caption)                particular \caption on input line 146.
 See the caption package documentation for explanation.
 
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 77.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 146.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 77.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 146.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -585,11 +591,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [3 <../img/SMG.png (PNG copy)>]
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 82.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 151.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 82.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 151.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 
@@ -602,44 +608,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [4 <../img/RC.png>]
 LaTeX Font Info:    Trying to load font information for T1+lmvtt on input line 
-91.
+160.
  (/usr/share/texmf/tex/latex/lm/t1lmvtt.fd
 File: t1lmvtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for TS1+lmvtt on input line
- 96.
+ 165.
 
 (/usr/share/texmf/tex/latex/lm/ts1lmvtt.fd
 File: ts1lmvtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-
-! Package inputenc Error: Invalid UTF-8 byte sequence.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.113   /* On recolte les données*
-                                   \/
-? 
-
-! Package inputenc Error: Invalid UTF-8 byte sequence.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.116 ...On les convertis en chaine de caractère 
-                                                  afin de les envoyer*\/
-? 
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 132.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 200.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 132.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 200.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 23.97728pt, for example:
@@ -651,11 +638,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [5]
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 132.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 200.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 132.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 200.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 
@@ -674,11 +661,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 AED: lastpage setting LastPage
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 135.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 203.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 135.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 203.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -693,28 +680,28 @@ Package rerunfilecheck Info: File `rapport_S4_S5.out' has not changed.
 (rerunfilecheck)             Checksum: 15513621DA0AE92EFA9224B347E5AD10;1034.
  ) 
 Here is how much of TeX's memory you used:
- 11351 strings out of 479304
- 172061 string characters out of 5869780
- 534143 words of memory out of 5000000
- 28300 multiletter control sequences out of 15000+600000
- 421780 words of font info for 53 fonts, out of 8000000 for 9000
+ 11530 strings out of 479304
+ 174188 string characters out of 5869780
+ 783753 words of memory out of 5000000
+ 28477 multiletter control sequences out of 15000+600000
+ 425528 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,16n,74p,564b,1306s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,16n,74p,564b,1450s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
 vips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</
 usr/share/texmf/fonts/type1/public/lm/lmvtt10.pfb></usr/share/texmf/fonts/type1
 /public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfb
 x1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/shar
 e/texmf/fonts/type1/public/cm-super/sfcc1095.pfb></usr/share/texmf/fonts/type1/
-public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm
-0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share
-/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/p
-ublic/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1
-728.pfb>
-Output written on rapport_S4_S5.pdf (7 pages, 3154300 bytes).
+public/cm-super/sfrm0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm
+0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share
+/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/p
+ublic/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1
+200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb>
+Output written on rapport_S4_S5.pdf (7 pages, 3173415 bytes).
 PDF statistics:
- 237 PDF objects out of 1000 (max. 8388607)
- 203 compressed objects within 3 object streams
- 59 named destinations out of 1000 (max. 500000)
+ 234 PDF objects out of 1000 (max. 8388607)
+ 200 compressed objects within 2 object streams
+ 54 named destinations out of 1000 (max. 500000)
  156 words of extra memory for PDF output out of 10000 (max. 10000000)
 
