@@ -1,9 +1,3 @@
-/*#include <Adafruit_GFX.h>
-#include <gfxfont.h>
-#include <Adafruit_SPITFT_Macros.h>
-#include <Adafruit_SPITFT.h>
-#include <Adafruit_GrayOLED.h>
-*/
 
 //Libraries
 // Communication serie on utilise :

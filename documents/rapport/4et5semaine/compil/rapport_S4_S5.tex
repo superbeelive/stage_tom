@@ -3,6 +3,7 @@
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{fancyhdr}
+\usepackage[toc,page]{appendix}
 \usepackage{fancybox}
 \usepackage{lastpage}
 \usepackage{graphicx}
@@ -21,7 +22,7 @@
 
 \fancyhead[L]{\includegraphics[width=1cm]{../../../logo/SBLlogo.png}}
 \fancyhead[C]{Rapport d'activités semaines du 11 et 18 avril 2022 }
-\fancyhead[R]{}
+\fancyhead[R]{ \includegraphics[width=1.2cm]{../../../logo/IUTlogo.png}}
 \fancyfoot[L]{\small Tom TUELEAU\normalsize}
 \fancyfoot[C]{}
 \fancyfoot[R]{\thepage/\pageref{LastPage}}
@@ -37,7 +38,7 @@
          \includegraphics[width=4cm]{../../../logo/IUTlogo.png}  \hspace{7cm}
          \includegraphics[width=4cm]{../../../logo/UMlogo.png}  \hspace{7cm}
     
-	\LARGE{Rapport d'activités semaines 25 avril et 18 m<ai 2022 }
+	\LARGE{Rapport d'activités des semaines du 9 au 20 mai 2022 }
 	\author{TUELEAU Tom}
 }
 \author{
@@ -58,28 +59,78 @@ Ce document a pour objectif de faire un état d'avancement du stage. Celui-ci r�
 \\Enfin, je conclurait sur le travail effectuer et les difficultés rencontrer. 
 
 \section{Finalisation du montage}
-Lors des précédent rapport, je vous ais exposer mes recherches et résultats quand au dimensionnement d'un montage amplificateur. Dans cette partie nous verrons tout d'abords la finalisation du montage et dans un second temps nous verrons l'installation de cellui-ci dans le rucher.\\
+Lors des précédents rapport\footnote{Voir "Rapport d’activités du 11 et 18 avril 2022", partie 4, page 7}, je vous ai exposer mes recherches et résultats quand au dimensionnement d'un montage amplificateur. Ce besoins c'était fait ressentir quand je m'était rendue compte que le signal émis par le piézo-électrique n'arrivait pas à être capter par l'Arduino.  Dans cette partie nous verrons tout d'abords la finalisation du montage et dans un second temps nous verrons l'installation de celui-ci dans le rucher.\\
 \subsection{Montage}
-Lors de cette semain j'ai pu effectuer le prototype final incluant l'amplification du signal, le piézo-électrique, le capteur de température et d'humidité (Si7021) et l'Arduino. Vous pouvez voire un schéma complet Figure \ref{SMG}.
+Lors de cette semaine j'ai pu effectuer le prototype final incluant l'amplification du signal, le piézo-électrique, le capteur de température et d'humidité (Si7021) et l'Arduino. Vous pouvez voire un schéma complet Figure \ref{SMG}.
+\\
 \begin{center}
     \includegraphics[scale=0.5]{../img/SMG.png}
     \captionof{figure}{Schéma montage final}
     \label{SMG}
 \end{center}
-
-
-
+Comme nous le verrons lors de la partie programmation, j'arrive à récupérer le signal envoyer par le piézo-électrique avec l'Arduino. Cella vas donc me permettre d'échantillonner celui-ci et de le traiter.
 \subsection{Installation dans la ruche}
-\subsection{Amélioration}
-\section{Programmation des capteurs}
-\subsection{Capteur de température et humidité}
-\subsection{Capteur de vibration}
-\subsection{Traitement des données}
+L'objectif étant de récolter les données dans la ruche, j'ai du installer les capteurs dans celle-ci. Comme vous pouvez le voire Figure \ref{RC}, j'ai glisser les différent capteur dans la ruche et leur ai souder des files assez long pour les brancher par la suite sur un microcontrôleur.
 
-\section{Programmation réseaux}
-\subsection{Liaisons MQTT}
-\subsection{Liaisons UDP}
+\begin{center}
+    \includegraphics[scale=0.1,angle=270]{../img/RC.png}
+    \captionof{figure}{Capteurs dans la ruche}
+    \label{RC}
+\end{center}
+\subsection{Amélioration}
+Maintenant que ce montage est fonctionnel, j'aimerais pouvoir lui apporter des améliorations. La première serai la création d'un PCB pour le montage amplificateur afin de rendre le montage plus professionnel. La seconde serait la création d'un boitier pouvant le contenir lui et l'Arduino. 
+\newpage
+\section{Programmation}
+Tout aux long des dernier semaine, j'ai eux à programmer plusieurs fonctionnalité. Dans cette partie je vais donc commencer par vous présenter les programme effectuer pour récolter les données des capteurs et effectuer leur traitement. Une deuxième partie abordera la programmation de la mise en communication des différents composant du système.
+\subsection{Programmation des capteurs}
+Pour ma premier mission j'avais trois  données à récupérer. Celle-ci sont l'humidité, la température et les vibration. Afin de récolter ces données j'ai choisi en tout trois capteur Un capteur piézo-électrique , un capteur de température et d'humidité (Si7021) et un microphone (INMP441). Dans un premier temps je vous parlerait du capteur de température et d'humidité. Une seconde partie abordera la programmation du capteur de vibration. Enfin une dernier partie abordera le traitement des données.  
+
+\subsubsection{Capteur de température et humidité}
+Comme indiquer précédemment le capteur utiliser pour ces données est le Si7021. Étant données que le microcontroleur que j'utilise est un arduino, il existe des librairies donnant accès à des fonction permettant d'obtenir les données voulus.
+\begin{scriptsize}
+	\begin{lstlisting}
+#include <Adafruit_Si7021.h>
+
+Adafruit_Si7021 sensor = Adafruit_Si7021();
+
+void callback(char* topic, byte* payload, unsigned int length) {
+}
+
+
+void setup() {
+   Serial.begin(9600);
+ if (!sensor.begin()) {
+    Serial.println("Did not find Si7021 sensor!");
+    while (true)
+      ;
+  }
+}
+ 
+void loop() {
+  double hum,temp;
+  char Ctemp[4], Chum[4];
+
+  hum = sensor.readHumidity();
+  temp = sensor.readTemperature();
+  
+  dtostrf(temp,2,2,Ctemp);
+  dtostrf(hum,2,2,Chum);
+
+ delay(1000);
+}	
+	\end{lstlisting}
+\end{scriptsize}
+
+Les fonction principals de ce programme sont , "sensor.begin" qui initialise la liaisons entre l'Arduino et le capteur.
+\subsubsection{Capteur de vibration}
+\subsubsection{Traitement des données}
+\subsection{Programmation réseaux}
+\subsubsection{Topologie du réseaux}
+\subsubsection{Liaisons MQTT}
+\subsubsection{Liaisons UDP}
+\section{Conclusion}
 
 \newpage
 \listoffigures
+
 \end{document}
