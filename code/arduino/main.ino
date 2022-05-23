@@ -15,13 +15,13 @@
 void mqttSendHumTmp(int nbVirgule);
 void callback(char* topic, byte* payload, unsigned int length);
 int beginEthSen();
-
+int piezo = 0;
 Adafruit_Si7021 sensor = Adafruit_Si7021();
 String request ;
 unsigned long refreshCounter  = 0;
 byte mac [6] = {0x54, 0x34, 0x41, 0x30, 0x30, 0x31};
 IPAddress ipMqtt(194, 199, 227, 239) ;
-IPAddress ipUdp(194, 199, 227, 239) ;
+IPAddress ipUdp(10, 24, 4, 127) ;
 IPAddress ipDevice(192, 168, 1, 179) ;
 EthernetUDP Udp;
 EthernetClient ethclient; 
@@ -38,6 +38,7 @@ void setup()
 void loop() 
 {
  	mqttSendHumTmp(2);
+	udpSendVibration(20,2,20);
 	delay(1000);
 }
 
@@ -54,7 +55,7 @@ void udpSendVibration(int nbEchantillon, int nbVirgule, int periodeEchantillonag
 	for(i=0;i<nbEchantillon;i++){
 		centsValeurs[i]=analogRead(piezo);
 		centsValeurs[i]=(centsValeurs[i]*5)/1023;
-		delay(periodeEnchantillonageMs);
+		delay(periodeEchantillonageMs);
 	}
 	delay(2000);
 	for(i=0;i<nbEchantillon;i++){
@@ -69,30 +70,34 @@ void udpSendVibration(int nbEchantillon, int nbVirgule, int periodeEchantillonag
 	Udp.write(data2);
 	Udp.endPacket();
 	Serial.println(Ethernet.localIP());
-	Udp.begin(PORT_UDP);
 }
 // Lance tout les fonction. Ehternet, UDP, MQTT et le capteur. 
 int beginEthSen()
 {
-
+	int error = 0;
 	if (!sensor.begin()) 
 	{
 		Serial.println("Did not find Si7021 sensor!");
-		return -1;
+		error=1;
 	}
 
 	Serial.println(F("Initialize System"));
-	Ethernet.begin(mac, ipDevice);
+	Ethernet.begin(mac);
 
 	while (!Ethernet.begin(mac)) 
 	{
 		Serial.println(F("failed. Retrying in 1 secondsi."));
-		return -1;
+		error=1;
 	}
 
 	pinMode(2, OUTPUT);
+	pinMode(0, INPUT);
 	Serial.print(F("IP Address: "));
 	Serial.println(Ethernet.localIP());
+	Udp.begin(PORT_UDP);
+	if(error=1)
+		return -1;
+
 	return 0;
 }
 
@@ -117,5 +122,8 @@ void mqttSendHumTmp(int nbVirgule)
 	{
 		Serial.println("error");
 	}
+
+}
+void callback(char* topic, byte* payload, unsigned int length){
 
 }

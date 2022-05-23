@@ -188,7 +188,40 @@ void loop() {
 Les fonction principals de ce programme sont , "sensor.begin" qui initialise la liaisons entre l'Arduino et le capteur, readHumidity et readTemperature permet comme leurs nom l'indique de récupérer la température et l'humidité messurer par le capteur. Les valeurs retourner par ces deux fonction sont de type "double". Afin de pouvoire les envoyer, je les convertis en chaine de caractère à l'aide de la fonction "dtostrf".
 
 \subsubsection{Capteur de vibration}
-Après avoir amplifier le signal du piézo-électrique, j'ai pu me consacrer aux l'acquisition des données de cellui-ci.
+Après avoir amplifier le signal du piézo-électrique, j'ai pu me consacrer à l'acquisition des données de cellui-ci. L'Arduino étant munis d'entrer analogique j'ai pu récupérer mon signal et le numériser. 
+
+\begin{scriptsize}
+	\begin{lstlisting}
+	...
+	
+	int piezo = 2;
+	void setup(){
+		pinMode(piezo,INPUT);
+	}
+	...
+
+	int nbChar = nbVirgule+2;
+	char tmp[nbEchantillon][nbChar];
+	char data2[nbEchantillon*nbChar];
+	double centsValeurs[nbEchantillon];
+	int i,y;
+	for(i=0;i<nbEchantillon;i++){
+		centsValeurs[i]=analogRead(piezo);
+		centsValeurs[i]=(centsValeurs[i]*5)/1023;
+		delay(periodeEchantillonageMs);
+	}
+	delay(2000);
+	for(i=0;i<nbEchantillon;i++){
+		dtostrf(centsValeurs[i],nbChar,nbVirgule,tmp[i]);
+		for(y=0;y<nbChar;y++){
+			data2[(nbChar*i)+y]=tmp[i][y];
+			Serial.println(data2[(i*nbChar)+y]);	
+		}	
+	}
+
+}
+	\end{lstlisting}
+\end{scriptsize}
 
 \subsubsection{Traitement des données}
 \subsection{Programmation réseaux}
