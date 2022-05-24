@@ -219,8 +219,35 @@ void udpSendVibration(int nbEchantillon, int nbVirgule, int periodeEchantillonag
 \end{scriptsize} 
 
 \subsubsection{Traitement des données}
-Une fois le signal obtenue 
-Une fois récolter les données du piézo sont enoyer à un ordinateur. 
+Une fois le signal obtenue il fallait l'annalyser en fréquence. Pour cella j'était dans un premier temps partie pour traiter directement sur l'Arduino en effectuant une transformer de Fourrier du signal. Cependant les capaciter de calcule de l'Arduino étant limiter et ayant observer une certaie lenteur à effectuer cette opération j'ai décider d'effectuer le systéme suivant. J'envoie les échantillons à un ordinateur distant qui effectura le traitement.\\
+J'ai donc par la suite écris un programme utilisant la librairie "fftw". Celle-ci proposant de multiple fonction basser sur l'algorithme FFT (Fast Fourier Transform), permetant d'effectuer une transformer de fourrier sur les signaux numérisés.
+
+\begin{scriptsize}
+\begin{lstlisting}
+
+	unsigned int N = 20;
+	int i;
+	double *out = malloc(sizeof(double) * N);
+	double list[]={3.920000,0.160000,5.630000,4.750000,0.370000,2.010000,5.870000,6.730000,9.870000,4.340000,9.950000,5.460000,8.420000,3.120000,3.670000,4.870000,3.280000,6.050000,4.650000,0.500000};
+	double * values;
+	values = malloc(sizeof(double)*N);
+	fftw_plan p;
+	p = fftw_plan_r2r_1d(N,values,out,FFTW_HC2R,FFTW_MEASURE);
+	
+	for(i=0;i<20;i++){
+			values[i]=list[i];
+	}
+	
+	fftw_execute(p);
+	for(i=0;i<20;i++){
+			printf("%f ",out[i]);
+	}
+	printf("\n");
+	fftw_destroy_plan(p);
+	free(out);
+\end{scriptsize}
+\end{lstlisting}
+
 \subsection{Programmation réseaux}
 Afin d'acheminer les information jusqu'aux different composante (site web, serveur) j'ai eux à programmer plusieurs liaisons réseaux. Je vais donc commencer par vous présenter la topologie de cellui-ci avec les différent éléments le composant ainsi que leur role. Dans un second temps je détaillerait la liaisons MQTT reliant la base de données et l'Arduino. Une dernier partie traitera de la communication des données au serveur.
 \subsubsection{Topologie du réseaux}

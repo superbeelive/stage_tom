@@ -13,7 +13,8 @@
 #define MAXLINE 2048
 #define NBCHAR 5
 void traitementData(double * valeurs, char * charData, int taille, int nbChar);
-void writeData(double * valeurs, int taille);
+void writeData(char * title, double * valeurs, int taille);
+void fftSig(double * valeurs, double * fft, int N);
 
 
 int main (){
@@ -42,14 +43,15 @@ int main (){
 	}
 
 	int len, n;
-
+	double fft[20];
 	len = sizeof(cliaddr); //len is value/result
 	for(;;){
 		n = recvfrom(sockfd, (char *)buffer, MAXLINE,MSG_WAITALL, ( struct sockaddr *) &cliaddr,&len);
 		buffer[n] = '\0';
-		printf("Client : %s\n", buffer);
 		traitementData(data,buffer,20,4);
-		writeData(data,20);
+		writeData("sig.dat",data,20);
+		fftSig(data,fft,20);
+		writeData("fft.dat",fft,20);
 		sendto(sockfd, "ACK", strlen("ACK"),MSG_CONFIRM, (const struct sockaddr *)&cliaddr,sizeof(cliaddr));
 	
 	}
@@ -70,12 +72,33 @@ void traitementData(double * valeurs, char * charData, int taille, int nbChar){
 }
 
 
-void writeData(double * valeurs, int taille){
+void writeData(char * title, double * valeurs, int taille){
 	int i;
 	FILE * f;
-	f=fopen("data.dat","w");	
+	f=fopen(title,"w");	
 	for(i=0;i<taille;i++){
 		fprintf(f,"%f\t%d\n",valeurs[i],i*20);
 	}	
 	fclose(f);
+}
+
+void fftSig(double * valeurs, double * fft, int N){
+	int i;
+	double * values = NULL ;
+	values = (double *)malloc(sizeof(double)*N);
+	fftw_plan p;
+	p = fftw_plan_r2r_1d(N,values,fft,FFTW_HC2R,FFTW_MEASURE);
+	
+	for(i=0;i<20;i++){
+			values[i]=valeurs[i];
+	}
+	
+	fftw_execute(p);
+	for(i=0;i<20;i++){
+			printf("%f ",fft[i]);
+	}
+	printf("\n");
+	fftw_destroy_plan(p);
+	free(values);	
+
 }

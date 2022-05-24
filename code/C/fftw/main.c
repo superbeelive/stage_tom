@@ -20,9 +20,10 @@ int main()
 	}
 	
 	fftw_execute(p);
-	for(i=0;i<11;i++){
-			printf("%f",out[i]);
+	for(i=0;i<20;i++){
+			printf("%f ",out[i]);
 	}
+	printf("\n");
 	fftw_destroy_plan(p);
 	//fftw_free(out);
 	free(out);

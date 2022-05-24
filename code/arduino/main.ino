@@ -13,7 +13,7 @@
 
 
 void udpSendChar(char * data);
-char gatherVibration(int nbEchantillon, int nbVirgule, int periodeEchantillonageMs);
+void gatherVibration(char * fdata, int nbEchantillon, int nbVirgule, double periodeEchantillonageMs);
 void mqttSendHumTmp(int nbVirgule);
 void callback(char* topic, byte* payload, unsigned int length);
 int beginEthSen();
@@ -39,21 +39,14 @@ void setup()
 }
 void loop() 
 {
-	char * data;
- 	mqttSendHumTmp(2);
-	data = gatherVibration(20,2,20);
-	udpSendChar[data];
+	char data[80];
+	
+ 	//mqttSendHumTmp(2);
+	gatherVibration(data,20,2,20);
 	delay(1000);
 }
 
 
-void udpSendChar(char * data)
-{
-	Udp.beginPacket(ipUdp,PORT_UDP);
-	Udp.write(data);
-	Udp.endPacket();
-	Serial.println(Ethernet.localIP());
-}
 // Lance tout les fonction. Ehternet, UDP, MQTT et le capteur. 
 int beginEthSen()
 {
@@ -108,12 +101,13 @@ void mqttSendHumTmp(int nbVirgule)
 
 }
 
-void gatherVibration(char fdata[nbEchantillon*nbChar], int nbEchantillon, int nbVirgule, int periodeEchantillonageMs)
+void gatherVibration(char * fdata, int nbEchantillon, int nbVirgule, double periodeEchantillonageMs)
 {
 	// Afin d'avoire le nombre de caractere je fait le nombre de chiffre apres la virgule plus deux
 	// qui represente mon premier digits et ma virgule.
 	int nbChar = nbVirgule+2;
 	char tmp[nbEchantillon][nbChar];
+	char data2[nbEchantillon*nbChar];
 	double centsValeurs[nbEchantillon];
 	int i,y;
 	for(i=0;i<nbEchantillon;i++){
@@ -125,10 +119,13 @@ void gatherVibration(char fdata[nbEchantillon*nbChar], int nbEchantillon, int nb
 	for(i=0;i<nbEchantillon;i++){
 		dtostrf(centsValeurs[i],nbChar,nbVirgule,tmp[i]);
 		for(y=0;y<nbChar;y++){
-			fdata[(nbChar*i)+y]=tmp[i][y];
-			Serial.println(fdata[(i*nbChar)+y]);	
+			data2[(nbChar*i)+y]=tmp[i][y];
 		}	
 	}
+	Serial.println(data2);
+	Udp.beginPacket(ipUdp,PORT_UDP);
+	Udp.write(data2);
+	Udp.endPacket();
 }
 
 void callback(char* topic, byte* payload, unsigned int length){
