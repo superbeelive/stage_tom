@@ -12,6 +12,8 @@
 #define PORT_UDP 8888
 
 
+void udpSendChar(char * data);
+char gatherVibration(int nbEchantillon, int nbVirgule, int periodeEchantillonageMs);
 void mqttSendHumTmp(int nbVirgule);
 void callback(char* topic, byte* payload, unsigned int length);
 int beginEthSen();
@@ -37,37 +39,18 @@ void setup()
 }
 void loop() 
 {
+	char * data;
  	mqttSendHumTmp(2);
-	udpSendVibration(20,2,20);
+	data = gatherVibration(20,2,20);
+	udpSendChar[data];
 	delay(1000);
 }
 
 
-void udpSendVibration(int nbEchantillon, int nbVirgule, int periodeEchantillonageMs)
+void udpSendChar(char * data)
 {
-	// Afin d'avoire le nombre de caractere je fait le nombre de chiffre apres la virgule plus deux
-	// qui represente mon premier digits et ma virgule.
-	int nbChar = nbVirgule+2;
-	char tmp[nbEchantillon][nbChar];
-	char data2[nbEchantillon*nbChar];
-	double centsValeurs[nbEchantillon];
-	int i,y;
-	for(i=0;i<nbEchantillon;i++){
-		centsValeurs[i]=analogRead(piezo);
-		centsValeurs[i]=(centsValeurs[i]*5)/1023;
-		delay(periodeEchantillonageMs);
-	}
-	delay(2000);
-	for(i=0;i<nbEchantillon;i++){
-		dtostrf(centsValeurs[i],nbChar,nbVirgule,tmp[i]);
-		for(y=0;y<nbChar;y++){
-			data2[(nbChar*i)+y]=tmp[i][y];
-			Serial.println(data2[(i*nbChar)+y]);	
-		}	
-	}
-
 	Udp.beginPacket(ipUdp,PORT_UDP);
-	Udp.write(data2);
+	Udp.write(data);
 	Udp.endPacket();
 	Serial.println(Ethernet.localIP());
 }
@@ -124,6 +107,30 @@ void mqttSendHumTmp(int nbVirgule)
 	}
 
 }
+
+void gatherVibration(char fdata[nbEchantillon*nbChar], int nbEchantillon, int nbVirgule, int periodeEchantillonageMs)
+{
+	// Afin d'avoire le nombre de caractere je fait le nombre de chiffre apres la virgule plus deux
+	// qui represente mon premier digits et ma virgule.
+	int nbChar = nbVirgule+2;
+	char tmp[nbEchantillon][nbChar];
+	double centsValeurs[nbEchantillon];
+	int i,y;
+	for(i=0;i<nbEchantillon;i++){
+		centsValeurs[i]=analogRead(piezo);
+		centsValeurs[i]=(centsValeurs[i]*5)/1023;
+		delay(periodeEchantillonageMs);
+	}
+	delay(2000);
+	for(i=0;i<nbEchantillon;i++){
+		dtostrf(centsValeurs[i],nbChar,nbVirgule,tmp[i]);
+		for(y=0;y<nbChar;y++){
+			fdata[(nbChar*i)+y]=tmp[i][y];
+			Serial.println(fdata[(i*nbChar)+y]);	
+		}	
+	}
+}
+
 void callback(char* topic, byte* payload, unsigned int length){
 
 }

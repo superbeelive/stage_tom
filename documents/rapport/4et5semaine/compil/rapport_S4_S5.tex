@@ -188,17 +188,9 @@ void loop() {
 Les fonction principals de ce programme sont , "sensor.begin" qui initialise la liaisons entre l'Arduino et le capteur, readHumidity et readTemperature permet comme leurs nom l'indique de récupérer la température et l'humidité messurer par le capteur. Les valeurs retourner par ces deux fonction sont de type "double". Afin de pouvoire les envoyer, je les convertis en chaine de caractère à l'aide de la fonction "dtostrf".
 
 \subsubsection{Capteur de vibration}
-Après avoir amplifier le signal du piézo-électrique, j'ai pu me consacrer à l'acquisition des données de cellui-ci. Comme vous pouvez le voire 
-
+Après avoir amplifier le signal du piézo-électrique, j'ai pu me consacrer à l'acquisition des données de cellui-ci. Afin de faciliter sont acquisition j'ai créée une fonction "udpSendVibration" prenant la quantiter d'échantillon souhaités, le nombre de decimal et la pęriode d'échantillonage (en milli seconde).
 \begin{scriptsize}
-	\begin{lstlisting}
-	...
-	
-	int piezo = 2;
-	void setup(){
-		pinMode(piezo,INPUT);
-	}
-	...
+\begin{lstlisting}
 
 void udpSendVibration(int nbEchantillon, int nbVirgule, int periodeEchantillonageMs)
 {
@@ -223,10 +215,12 @@ void udpSendVibration(int nbEchantillon, int nbVirgule, int periodeEchantillonag
 	}
 
 }
-	\end{lstlisting}
-\end{scriptsize}
+\end{lstlisting}
+\end{scriptsize} 
 
 \subsubsection{Traitement des données}
+Une fois le signal obtenue 
+Une fois récolter les données du piézo sont enoyer à un ordinateur. 
 \subsection{Programmation réseaux}
 Afin d'acheminer les information jusqu'aux different composante (site web, serveur) j'ai eux à programmer plusieurs liaisons réseaux. Je vais donc commencer par vous présenter la topologie de cellui-ci avec les différent éléments le composant ainsi que leur role. Dans un second temps je détaillerait la liaisons MQTT reliant la base de données et l'Arduino. Une dernier partie traitera de la communication des données au serveur.
 \subsubsection{Topologie du réseaux}
