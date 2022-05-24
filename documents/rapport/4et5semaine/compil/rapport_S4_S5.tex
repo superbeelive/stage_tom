@@ -3,10 +3,10 @@
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{fancyhdr}
-\usepackage[toc,page]{appendix}
-\usepackage{fancybox}
 \usepackage{lastpage}
+\usepackage{fancybox}
 \usepackage{graphicx}
+\usepackage{appendix}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2.5cm]{geometry}
 \geometry{a4paper}
 \setlength{\parindent}{0pt}
@@ -255,34 +255,19 @@ Dans l'exemple ci-dessus on effecue la transformer de fourirer du signal compose
 \subsection{Programmation réseaux}
 Afin d'acheminer les information jusqu'aux different composante (site web, serveur) j'ai eux à programmer plusieurs liaisons réseaux. Je vais donc commencer par vous présenter la topologie de cellui-ci avec les différent éléments le composant ainsi que leur role. Dans un second temps je détaillerait la liaisons MQTT reliant la base de données et l'Arduino. Une dernier partie traitera de la communication des données au serveur.
 \subsubsection{Topologie du réseaux}
-Comme dis précédement le système est composer de plusieur éléments. Tout d'abords l'Arduino récolte les données et les envoie aux autre composante. La température et l'humiditer sont envoyer via MQTT vers le serveur tandis que les données du piezo sont envoyer via UDP.  
+Comme dis précédement le système est composer de plusieur éléments. Tout d'abords l'Arduino récolte les données et les envoie aux autre composante. La température et l'humiditer sont envoyer via MQTT vers le serveur tandis que les données du piezo sont envoyer via UDP. Une fois traiter ces dernier sont aussi envoyer aux sur un topic MQTT.
+\begin{center}
+    \includegraphics[scale=1]{../img/schemaNet.png}
+	\captionof{figure}{Schema Réseaux}
+    \label{SN}
+\end{center}
 \subsubsection{Liaisons MQTT}
-Afin d'envoyer les données du raspberry vers le serveur j'ai choisi le protocle MQTT. J'ai choisi le protocole MQTT pour deux raisons.La premier est que le projet seras amener à évoluer et contiendras plusieurs capteur récoltant la même données à des endroits different de la ruche. Ainsi avec le systéme de topics, on pouras identifier facilement ces différent capteur. La deuxième est que la solution envisager pour le site web et la base de donné est trés facilement couplabe avec ce protovole. 
+Afin d'envoyer les données du microcontroleur vers le serveur j'ai choisi le protocle MQTT et ce pour deux raisons.La premier est que le projet seras amener à évoluer et contiendras plusieurs capteur récoltant la même données à des endroits different de la ruche. Ainsi avec le systéme de topics, on pouras identifier facilement ces différent capteur. La deuxième est que la solution envisager pour le site web, et la base de données, est trés facilement couplabe avec ce protocole. 
 
 \begin{scriptsize}
 \begin{lstlisting}
 
-void mqttSendHumTmp(int nbVirgule)
-{
 
-	double hum,temp;
-	char Ctemp[2+nbVirgule];
-	char Chum[2+nbVirgule];
-	hum = sensor.readHumidity();
-	temp = sensor.readTemperature();
-	dtostrf(temp,2,nbVirgule,Ctemp);
-	dtostrf(hum,2,nbVirgule,Chum);
-	Serial.println(Ctemp);
-	if(!client.publish("topic",Ctemp))
-	{
-		Serial.println("error");
-	}
-	if(!client.publish("topic",Chum))
-	{
-		Serial.println("error");
-	}
-
-}
 \end{lstlisting}
 \end{scriptsize}
 

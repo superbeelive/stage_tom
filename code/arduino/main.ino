@@ -89,11 +89,11 @@ void mqttSendHumTmp(int nbVirgule)
 	dtostrf(temp,2,nbVirgule,Ctemp);
 	dtostrf(hum,2,nbVirgule,Chum);
 	Serial.println(Ctemp);
-	if(!client.publish("topic",Ctemp))
+	if(!client.publish("cadre3/temperature",Ctemp))
 	{
 		Serial.println("error");
 	}
-	if(!client.publish("topic",Chum))
+	if(!client.publish("cadre3/humidite",Chum))
 	{
 		Serial.println("error");
 	}
