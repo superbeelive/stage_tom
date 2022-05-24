@@ -6,6 +6,7 @@
 #include <string.h>
 #include <sys/types.h>
 #include <sys/socket.h>
+#include <sys/stat.h>
 #include <arpa/inet.h>
 #include <netinet/in.h>
 
@@ -16,14 +17,19 @@ void traitementData(double * valeurs, char * charData, int taille, int nbChar);
 void writeData(char * title, double * valeurs, int taille);
 void fftSig(double * valeurs, double * fft, int N);
 
-
+struct stat st = {0};
 int main (){
-
 	printf("Début du programme. \n");
-	int sockfd;
+	int sockfd, len, n, echantillon, nbchar;
+	nbchar = 4;
+	echantillon = 80;
 	char buffer[MAXLINE];
 	struct sockaddr_in servaddr, cliaddr;
-	double data[20];
+	double data[echantillon];
+	double fft[echantillon];
+	if(stat("graph",&st)== -1){
+		mkdir("graph", 0700);
+	}
 	if ( (sockfd = socket(AF_INET, SOCK_DGRAM, 0)) < 0 ) {
 		perror("Erreur lors de la creation de la socket");
 		exit(EXIT_FAILURE);
@@ -42,16 +48,14 @@ int main (){
 		exit(EXIT_FAILURE);
 	}
 
-	int len, n;
-	double fft[20];
 	len = sizeof(cliaddr); //len is value/result
 	for(;;){
 		n = recvfrom(sockfd, (char *)buffer, MAXLINE,MSG_WAITALL, ( struct sockaddr *) &cliaddr,&len);
 		buffer[n] = '\0';
-		traitementData(data,buffer,20,4);
-		writeData("sig.dat",data,20);
-		fftSig(data,fft,20);
-		writeData("fft.dat",fft,20);
+		traitementData(data,buffer,echantillon,4);
+		writeData("graph/sig.dat",data,echantillon);
+		fftSig(data,fft,echantillon);
+		writeData("graph/fft.dat",fft,echantillon);
 		sendto(sockfd, "ACK", strlen("ACK"),MSG_CONFIRM, (const struct sockaddr *)&cliaddr,sizeof(cliaddr));
 	
 	}

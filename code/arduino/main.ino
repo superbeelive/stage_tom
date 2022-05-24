@@ -24,7 +24,6 @@ unsigned long refreshCounter  = 0;
 byte mac [6] = {0x54, 0x34, 0x41, 0x30, 0x30, 0x31};
 IPAddress ipMqtt(194, 199, 227, 239) ;
 IPAddress ipUdp(10, 24, 4, 127) ;
-IPAddress ipDevice(192, 168, 1, 179) ;
 EthernetUDP Udp;
 EthernetClient ethclient; 
 PubSubClient client(ipMqtt,PORT_MQTT,callback,ethclient); 
@@ -39,10 +38,10 @@ void setup()
 }
 void loop() 
 {
-	char data[80];
+	char data[320];
 	
  	//mqttSendHumTmp(2);
-	gatherVibration(data,20,2,20);
+	gatherVibration(data,80,2,2);
 	delay(1000);
 }
 
