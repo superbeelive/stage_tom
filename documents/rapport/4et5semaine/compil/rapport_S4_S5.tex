@@ -146,6 +146,13 @@ L'objectif étant de récolter les données dans la ruche, j'ai du installer les
     \captionof{figure}{Capteurs dans la ruche}
     \label{RC}
 \end{center}
+\subsection{Résultat}
+Aprés avoir échantilloner le signal obtenue par le piezo et l'avoire envoyer aux serveur de traitement, j'ai pu obtenire le graphique Figure \ref{G1}\footnote{ Abscisse : temps en ms Ordonné : tension en V }.
+\begin{center}
+    \includegraphics[scale=0.3]{../img/GRAPH1.png}
+	\captionof{figure}{Graph signale piezo}
+    \label{G1}
+\end{center}
 \subsection{Amélioration}
 Maintenant que ce montage est fonctionnel, j'aimerais pouvoir lui apporter des améliorations. La première serai la création d'un PCB pour le montage amplificateur afin de rendre le montage plus professionnel. La seconde serait la création d'un boitier pouvant le contenir lui et l'Arduino. 
 \newpage
@@ -263,51 +270,65 @@ Comme dis précédement le système est composer de plusieur éléments. Tout d'
 \end{center}
 \subsubsection{Liaisons MQTT}
 Afin d'envoyer les données du microcontroleur vers le serveur j'ai choisi le protocle MQTT et ce pour deux raisons.La premier est que le projet seras amener à évoluer et contiendras plusieurs capteur récoltant la même données à des endroits different de la ruche. Ainsi avec le systéme de topics, on pouras identifier facilement ces différent capteur. La deuxième est que la solution envisager pour le site web, et la base de données, est trés facilement couplabe avec ce protocole. 
-
+Ci-dessous on peut voire le code utiliser pour envoyer sur les topic "cadre3/temperature" et "cadre3/humidite". 
 \begin{scriptsize}
 \begin{lstlisting}
-
-
+	...
+	if(!client.publish("cadre3/temperature",Ctemp))
+	{
+		Serial.println("error");
+	}
+	if(!client.publish("cadre3/humidite",Chum))
+	{
+		Serial.println("error");
+	}
+	...
 \end{lstlisting}
 \end{scriptsize}
 
 \subsubsection{Liaisons UDP}
+Afin de transmetre les données du piezo aux serveur, j'ai choisis d'effectuer une liaisons UDP. J'ai choisi ce protocole car la liaisons n'as pas besoins de haute fideliter. L'arduino envoie donc sur le serveur les données du piezo. Le programme ci-dessous crées une crées une socket et attends que l'arduino envoie ces données. 
 
 \begin{scriptsize}
 \begin{lstlisting}
 
-void gatherVibration(char * fdata, int nbEchantillon, int nbVirgule, double periodeEchantillonageMs)
-{
-	// Afin d'avoire le nombre de caractere je fait le nombre de chiffre apres la virgule plus deux
-	// qui represente mon premier digits et ma virgule.
-	int nbChar = nbVirgule+2;
-	char tmp[nbEchantillon][nbChar];
-	char data2[nbEchantillon*nbChar];
-	double centsValeurs[nbEchantillon];
-	int i,y;
-	for(i=0;i<nbEchantillon;i++){
-		centsValeurs[i]=analogRead(piezo);
-		centsValeurs[i]=(centsValeurs[i]*5)/1023;
-		delay(periodeEchantillonageMs);
-	}
-	delay(2000);
-	for(i=0;i<nbEchantillon;i++){
-		dtostrf(centsValeurs[i],nbChar,nbVirgule,tmp[i]);
-		for(y=0;y<nbChar;y++){
-			data2[(nbChar*i)+y]=tmp[i][y];
-		}	
-	}
-	Serial.println(data2);
-	Udp.beginPacket(ipUdp,PORT_UDP);
-	Udp.write(data2);
-	Udp.endPacket();
-}
+	...
 
+	int sockfd, len, n, echantillon, nbchar;
+	char buffer[MAXLINE];
+	struct sockaddr_in servaddr, cliaddr;
+	
+	if ( (sockfd = socket(AF_INET, SOCK_DGRAM, 0)) < 0 ) {
+		perror("Erreur lors de la creation de la socket");
+		exit(EXIT_FAILURE);
+	}
+
+	memset(&servaddr, 0, sizeof(servaddr));
+	memset(&cliaddr, 0, sizeof(cliaddr));
+
+	servaddr.sin_family = AF_INET; 
+	servaddr.sin_addr.s_addr = INADDR_ANY;
+	servaddr.sin_port = htons(PORT);
+
+	if ( bind(sockfd, (const struct sockaddr *)&servaddr,sizeof(servaddr)) < 0 )
+	{
+		perror("bind failed");
+		exit(EXIT_FAILURE);
+	}
+
+	len = sizeof(cliaddr); //len is value/result
+	for(;;){
+		n = recvfrom(sockfd, (char *)buffer, MAXLINE,MSG_WAITALL, ( struct sockaddr *) &cliaddr,&len);
+		buffer[n] = '\0';
+		sendto(sockfd, "ACK", strlen("ACK"),MSG_CONFIRM, (const struct sockaddr *)&cliaddr,sizeof(cliaddr));
+	
+	}
+
+	...
 \end{lstlisting}
 \end{scriptsize}
-
 \section{Conclusion}
-
+En conclusion, maintenent que les données on été récolter et achemineril faut pouvoire les afficher sur un site web. Il me reste aussi à effectuer un montage final plus propre pour la partie electronique du système. 
 \newpage
 \listoffigures
 
