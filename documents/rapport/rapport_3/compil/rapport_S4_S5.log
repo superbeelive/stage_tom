@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.5.24)  28 MAY 2022 01:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.5.30)  30 MAY 2022 17:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -558,42 +558,42 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 122.
 
 [2 <../../../logo/SBLlogo.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--135
+Underfull \hbox (badness 10000) in paragraph at lines 132--134
 
  []
 
 <../img/SMG.png, id=112, 953.81343pt x 420.82219pt>
 File: ../img/SMG.png Graphic file (type png)
 <use ../img/SMG.png>
-Package pdftex.def Info: ../img/SMG.png  used on input line 136.
+Package pdftex.def Info: ../img/SMG.png  used on input line 135.
 (pdftex.def)             Requested size: 476.90555pt x 210.41057pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 137.
+(caption)                particular \caption on input line 136.
 See the caption package documentation for explanation.
 
 <../img/RC.png, id=114, 4015.0pt x 2258.4375pt>
 File: ../img/RC.png Graphic file (type png)
 <use ../img/RC.png>
-Package pdftex.def Info: ../img/RC.png  used on input line 145.
+Package pdftex.def Info: ../img/RC.png  used on input line 144.
 (pdftex.def)             Requested size: 401.52353pt x 225.85698pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 146.
+(caption)                particular \caption on input line 145.
 See the caption package documentation for explanation.
 
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 146.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 145.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 146.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 145.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -604,7 +604,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-11.97728pt}.
 
 
-LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 146.
+LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 145.
 
 [3 <../img/SMG.png (PNG copy)>]
 <../img/GRAPH1.png, id=128, 1020.81375pt x 462.97969pt>
@@ -660,23 +660,23 @@ LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 158.
 
 [5]
 LaTeX Font Info:    Trying to load font information for T1+lmvtt on input line 
-167.
+172.
  (/usr/share/texmf-dist/tex/latex/lm/t1lmvtt.fd
 File: t1lmvtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for TS1+lmvtt on input line
- 172.
+ 179.
 
 (/usr/share/texmf-dist/tex/latex/lm/ts1lmvtt.fd
 File: ts1lmvtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 200.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 197.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 200.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 197.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 
@@ -688,48 +688,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-11.97728pt}.
 
 
-LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 200.
+LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 197.
 
 [6]
-File: ../../../logo/SBLlogo.png Graphic file (type png)
-<use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 253.
-(pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
-File: ../../../logo/IUTlogo.png Graphic file (type png)
-<use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 253.
-(pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 23.97728pt, for example:
-(fancyhdr)                \setlength{\headheight}{23.97728pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-11.97728pt}.
-
-
-LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 253.
-
-[7]
-<../img/schemaNet.png, id=222, 400.49625pt x 154.32657pt>
+<../img/schemaNet.png, id=172, 400.49625pt x 154.32657pt>
 File: ../img/schemaNet.png Graphic file (type png)
 <use ../img/schemaNet.png>
-Package pdftex.def Info: ../img/schemaNet.png  used on input line 267.
+Package pdftex.def Info: ../img/schemaNet.png  used on input line 239.
 (pdftex.def)             Requested size: 400.49527pt x 154.32617pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 268.
+(caption)                particular \caption on input line 240.
 See the caption package documentation for explanation.
 
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 286.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 240.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 286.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 240.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -740,16 +719,37 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-11.97728pt}.
 
 
-LaTeX Warning: Reference `LastPage' on page 8 undefined on input line 286.
+LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 240.
+
+[7]
+File: ../../../logo/SBLlogo.png Graphic file (type png)
+<use ../../../logo/SBLlogo.png>
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 279.
+(pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
+File: ../../../logo/IUTlogo.png Graphic file (type png)
+<use ../../../logo/IUTlogo.png>
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 279.
+(pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 23.97728pt, for example:
+(fancyhdr)                \setlength{\headheight}{23.97728pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-11.97728pt}.
+
+
+LaTeX Warning: Reference `LastPage' on page 8 undefined on input line 279.
 
 [8 <../img/schemaNet.png>]
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 332.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 290.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 332.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 290.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 
@@ -761,7 +761,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-11.97728pt}.
 
 
-LaTeX Warning: Reference `LastPage' on page 9 undefined on input line 332.
+LaTeX Warning: Reference `LastPage' on page 9 undefined on input line 290.
 
 [9] (./rapport_S4_S5.lof)
 \tf@lof=\write6
@@ -795,13 +795,13 @@ Package rerunfilecheck Info: File `rapport_S4_S5.out' has not changed.
 (rerunfilecheck)             Checksum: 300005B4D110BA602B24A2A08EE656D3;2399.
  ) 
 Here is how much of TeX's memory you used:
- 15011 strings out of 478238
- 234537 string characters out of 5850456
- 891755 words of memory out of 5000000
- 32908 multiletter control sequences out of 15000+600000
+ 14968 strings out of 478238
+ 234050 string characters out of 5850456
+ 884755 words of memory out of 5000000
+ 32867 multiletter control sequences out of 15000+600000
  491357 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,16n,63p,569b,1924s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,16n,63p,570b,1924s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf-dist/f
 onts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-
 super-t1.enc}</usr/share/texmf-dist/fonts/type1/public/lm/lmvtt10.pfb></usr/sha
@@ -814,10 +814,10 @@ st/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf-dist/fonts/type1/
 public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super
 /sfrm1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><
 /usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb>
-Output written on rapport_S4_S5.pdf (10 pages, 3266761 bytes).
+Output written on rapport_S4_S5.pdf (10 pages, 3266677 bytes).
 PDF statistics:
- 385 PDF objects out of 1000 (max. 8388607)
- 330 compressed objects within 4 object streams
- 156 named destinations out of 1000 (max. 500000)
+ 383 PDF objects out of 1000 (max. 8388607)
+ 328 compressed objects within 4 object streams
+ 154 named destinations out of 1000 (max. 500000)
  174 words of extra memory for PDF output out of 10000 (max. 10000000)
 
