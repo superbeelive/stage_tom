@@ -88,7 +88,6 @@
   title=\lstname,
 }
 
-
 \fancyhead[L]{\includegraphics[width=1cm]{../../../logo/SBLlogo.png}}
 \fancyhead[C]{Rapport d'activités mois de mai 2022 }
 \fancyhead[R]{ \includegraphics[width=1.2cm]{../../../logo/IUTlogo.png}}
@@ -107,7 +106,7 @@
          \includegraphics[width=4cm]{../../../logo/IUTlogo.png}  \hspace{7cm}
          \includegraphics[width=4cm]{../../../logo/UMlogo.png}  \hspace{7cm}
     
-	\LARGE{Rapport d'activités mois de mai 2022 }
+	\LARGE{Rapport d'activités mensuel}
 	\author{TUELEAU Tom}
 }
 \author{
@@ -122,23 +121,23 @@
 \newpage
 \section{Introduction}
 Ce document a pour objectif de faire un état d'avancement du stage. Celui-ci résumera donc le travail fait lors de la fin du mois d'avril et le mois de mai.
-\\Dans un premier temps, je reviendrai sur le montage amplificateur vue lors du dernier rapport et vous exposerai les résultats obtenus.
+\\Dans un premier temps, je reviendrai sur le montage amplificateur vu lors du dernier rapport et vous exposerai les résultats obtenus.
 \\Une seconde partie présentera les programmes créés afin de récolter, envoyer et traiter les données des capteurs. 
-\\Enfin, je conclurai sur le travail effectuer et les difficultés rencontrer. 
+\\Enfin, je conclurai sur le travail effectué et les difficultés rencontrées. 
 
 \section{Finalisation du montage}
-Lors des précédents rapports\footnote{Voir "Rapport d’activités du 11 et 18 avril 2022", partie 4, page 7}, je vous ai exposer mes recherches et résultats quand au dimensionnement d'un montage amplificateur. Ce besoins c'était fait ressentir quand je m'étais rendue compte que le signal émis par le piézo-électrique n'arrivait pas à être capté par l'Arduino.  Dans cette partie nous verrons tout d'abords la finalisation du montage et dans un second temps nous verrons l'installation de celui-ci dans le rucher.\\
+Lors des précédents rapports\footnote{Voir "Rapport d’activités du 11 et 18 avril 2022", partie 4, page 7}, je vous ai exposé mes recherches et résultats quand au dimensionnement d'un montage amplificateur. Ce besoin s'était fait ressentir quand je m'étais rendu compte que le signal émis par le piézo-électrique n'arrivait pas à être capté par l'Arduino.  Dans cette partie nous verrons tout d'abord la finalisation du montage et dans un second temps nous verrons l'installation de celui-ci dans le rucher.\\
 \subsection{Montage}
-Lors de cette semaine j'ai pu effectué le prototype incluant l'amplification du signal, le piézo-électrique, le capteur de température et d'humidité (Si7021) et l'Arduino. Vous pouvez voire un schéma complet Figure \ref{SMG}.
+Lors de cette semaine j'ai pu effectuer le prototype incluant l'amplification du signal, le piézo-électrique, le capteur de température et d'humidité (Si7021) et l'Arduino. Vous pouvez voir un schéma complet Figure \ref{SMG}.
 \\
 \begin{center}
     \includegraphics[scale=0.5]{../img/SMG.png}
     \captionof{figure}{Schéma montage final}
     \label{SMG}
 \end{center}
-Comme nous le verrons lors de la partie programmation, j'arrive à récupérer le signal envoyé par le piézo-électrique avec l'Arduino. Cella vas donc me permettre d'échantillonner celui-ci et de le traiter.
+Comme nous le verrons lors de la partie programmation, j'arrive à récupérer le signal envoyé par le piézo-électrique avec l'Arduino. Cela va donc me permettre d'échantillonner celui-ci et de le traiter.
 \subsection{Installation dans la ruche}
-L'objectif étant de récolter les données dans la ruche, j'ai du installer les capteurs dans celle-ci. Comme vous pouvez le voire Figure \ref{RC}, j'ai glisser les différents capteurs dans la ruche et leurs ai souder des files assez long pour les brancher par la suite sur un microcontrôleur.
+L'objectif étant de récolter les données dans la ruche, j'ai du installer les capteurs dans celle-ci. Comme vous pouvez le voire Figure \ref{RC}, j'ai glissé les différents capteurs dans la ruche et leur ai soudé des fils assez longs pour les brancher par la suite sur un microcontrôleur.
 
 \begin{center}
     \includegraphics[scale=0.1,angle=270]{../img/RC.png}
@@ -146,27 +145,27 @@ L'objectif étant de récolter les données dans la ruche, j'ai du installer les
     \label{RC}
 \end{center}
 Le montage est maintenant installé dans la ruche, il reste cependant à installer un câble Ethernet afin de relier l'Arduino au réseau.
-\subsection{Résultat}
-Après avoir échantillonné le signal obtenue par le piézo-électrique et l'avoir envoyé au serveur de traitement, j'ai pu obtenir le graphique Figure \ref{G1}\footnote{ Abscisse : temps en ms Ordonnée : tension en V }.
+\subsection{Résultats}
+Après avoir échantillonné le signal obtenu par le piézo-électrique et l'avoir envoyé au serveur de traitement, j'ai pu obtenir le graphique Figure \ref{G1}\footnote{ Abscisse : temps en ms Ordonnée : tension en V }.
 \begin{center}
     \includegraphics[scale=0.3]{../img/GRAPH1.png}
-	\captionof{figure}{Graphique du signale piézo-électrique}
+	\captionof{figure}{Graphique du signal piézo-électrique}
     \label{G1}
 \end{center}
-\subsection{Amélioration}
-Maintenant que ce montage est fonctionnel, j'aimerais pouvoir lui apporter des améliorations. La première serai la création d'un PCB pour le montage amplificateur afin de rendre le montage plus professionnel. La seconde serait la création d'un boitier pouvant le contenir lui et l'Arduino. 
+\subsection{Améliorations}
+Maintenant que ce montage est fonctionnel, j'aimerais pouvoir lui apporter des améliorations. La première serait la création d'un PCB pour le montage amplificateur afin de rendre le montage plus professionnel. La seconde serait la création d'un boitier pouvant le contenir lui et l'Arduino. 
 \newpage
 \section{Programmation}
-Tout au long des dernières semaines, j'ai eu à programmer plusieurs fonctionnalités. Dans cette partie je vais donc commencer par vous présenter les programmes effectuer pour récolter les données des capteurs et effectuer leur traitement. Une deuxième partie abordera la programmation de la mise en communication des différents composant du système.
+Tout au long des dernières semaines, j'ai eu à programmer plusieurs fonctionnalités. Dans cette partie je vais donc commencer par vous présenter les programmes réalisés pour récolter les données des capteurs et effectuer leur traitement. Une deuxième partie abordera la programmation de la mise en communication des différents composants du système.
 \subsection{Programmation des capteurs}
-Pour ma premier mission j'avais trois  données à récupérer. Celle-ci sont l'humidité, la température et les vibrations. Afin de récolter ces données j'ai choisi en tous trois capteur. Un capteur piézo-électrique , un capteur de température et d'humidité (Si7021) et un microphone (INMP441). Dans un premier temps je vous parlerait du capteur de température et d'humidité. Une seconde partie abordera la programmation du capteur de vibration. Enfin une dernier partie abordera le traitement des données.  
+Pour ma premier mission j'avais trois  données à récupérer. Celle-ci sont l'humidité, la température et les vibrations. Afin de récolter ces données j'ai choisi en tout trois capteurs. Un capteur piézo-électrique , un capteur de température et d'humidité (Si7021) et un microphone (INMP441). Dans un premier temps je vous parlerai du capteur de température et d'humidité. Une seconde partie abordera la programmation du capteur de vibration. Enfin une derniere partie abordera le traitement des données.  
 
 \subsubsection{Capteur de température et humidité}
-Comme indiquer précédemment le capteur utiliser pour ces données est le Si7021. Étant données que le microcontroleur que j'utilise est un Arduino, il existe des librairies donnant accès à des fonction permettant d'obtenir les données voulus.
-Les fonction principal de ce programme sont , "sensor.begin" qui initialise la liaisons entre l'Arduino et le capteur, "readHumidity" et "readTemperature" permet comme leurs nom l'indique de récupérer la température et l'humidité mesurer par le capteur. Les valeurs retourner par ces deux fonction sont de type "double". Afin de pouvoir les envoyer, je les convertis en chaines de caractères à l'aide de la fonction "dtostrf".
+Comme indiqué précédemment le capteur utilisé pour ces données est le Si7021. Étant donné que le microcontroleur que j'utilise est un Arduino, il existe des librairies donnant accès à des fonctions permettant d'obtenir les données voulues.
+Les fonctions principals de ce programme sont , "sensor.begin" qui initialise la liaison entre l'Arduino et le capteur, "readHumidity" et "readTemperature" permettent comme leur nom l'indique de récupérer la température et l'humidité mesurées par le capteur. Les valeurs retourner par ces deux fonctions sont de type "double". Afin de pouvoir les envoyer, je les convertis en chaines de caractères à l'aide de la fonction "dtostrf".
 
 \subsubsection{Capteur de vibration}
-Après avoir amplifier le signal du piézo-électrique, j'ai pu me consacrer à l'acquisition des données de celui-ci. Afin de faciliter sont acquisition j'ai créée une fonction "udpSendVibration" prenant la quantité d'échantillon souhaités, le nombre de decimal et la pęriode d'échantillonage (en milli seconde).
+Après avoir amplifié le signal du piézo-électrique, j'ai pu me consacrer à l'acquisition des données de celui-ci. Afin de faciliter son acquisition j'ai créé une fonction "udpSendVibration" prenant la quantité d'échantillon souhaitée, le nombre de décimales et la période d'échantillonage (en milliseconde).
 
 \begin{scriptsize}
 \begin{lstlisting}
@@ -198,8 +197,8 @@ void udpSendVibration(int nbEchantillon, int nbVirgule, int periodeEchantillonag
 \end{scriptsize} 
 
 \subsubsection{Traitement des données}
-Une fois le signal obtenue il fallait l'annalyser en fréquence. Pour cella j'était dans un premier temps partie pour traiter directement sur l'Arduino en effectuant une transformer de Fourrier du signal. Cependant les capaciter de calcule de l'Arduino étant limiter et ayant observer une certaine lenteur à effectuer cette opération j'ai décider d'effectuer le systéme suivant. J'envoie les échantillons à un ordinateur distant qui effectura le traitement et renvoie le résultat obtenue en MQTT.\\
-J'ai donc par la suite écris un programme utilisant la librairie "fftw". Celle-ci proposant de multiple fonction basser sur l'algorithme FFT (Fast Fourier Transform), permetant d'effectuer une transformer de fourrier sur les signaux numérisés.
+Une fois le signal obtenu il fallait l'annalyser. J'avais dans un premier temps commencé à traiter les données directement sur l'Arduino en effectuant une transformé de Fourrier du signal. Cependant les capacités de calcul de l'Arduino étant limitées et ayant observé une certaine lenteur à effectuer cette opération j'ai décidé d'effectuer le systéme suivant. J'envoie les échantillons à un ordinateur distant qui effectuera le traitement et renvoie le résultat obtenu en MQTT.\\
+J'ai donc par la suite écrit un programme utilisant la librairie "fftw". Celle-ci proposant de multiples fonctions bassées sur l'algorithme FFT (Fast Fourier Transform), permettant d'effectuer une transformée de Fourrier sur les signaux numérisés.
 
 \begin{scriptsize}
 \begin{lstlisting}
@@ -230,22 +229,21 @@ J'ai donc par la suite écris un programme utilisant la librairie "fftw". Celle-
 \end{scriptsize}
 
 
-Dans l'exemple ci-dessus on effecue la transformer de fourirer du signal composer des points de la liste.
-\subsection{Programmation réseaux}
-Afin d'acheminer les information jusqu'aux different composante (site web, serveur) j'ai eux à programmer plusieurs liaisons réseaux. Je vais donc commencer par vous présenter la topologie de cellui-ci avec les différent éléments le composant ainsi que leur role. Dans un second temps je détaillerait la liaisons MQTT reliant la base de données et l'Arduino. Une dernier partie traitera de la communication des données au serveur.
-\subsubsection{Topologie du réseaux}
-Comme dis précédement le système est composer de plusieur éléments. Tout d'abords l'Arduino récolte les données et les envoie aux autre composante. La température et l'humiditer sont envoyer via MQTT vers le serveur tandis que les données du piezo sont envoyer via UDP. Une fois traiter ces dernier sont aussi envoyer aux sur un topic MQTT.
+Dans l'exemple ci-dessus on effecue la transformée de Fourrier du signal composé des points de la liste.
+\subsection{Programmation réseau}
+Afin d'acheminer les informations jusqu'aux differents composantes (site web, serveur) j'ai eu à programmer plusieurs liaisons réseau. Je vais donc commencer par vous présenter la topologie de celui-ci avec les différent éléments le composant ainsi que leurs rôles. Dans un second temps je détaillerai la liaison MQTT reliant la base de données et l'Arduino. Une derniere partie traitera de la communication des données au serveur.
+\subsubsection{Topologie du réseau}
+Comme dit précédement le système est composé de plusieurs éléments. Tout d'abord l'Arduino récolte les données et les envoie aux autres composantes. La température et l'humidité sont envoyés via MQTT vers le serveur tandis que les données du piezo sont envoyées via UDP. Une fois traité ces derniers sont aussi envoyés sur un topic MQTT.
 \begin{center}
     \includegraphics[scale=1]{../img/schemaNet.png}
 	\captionof{figure}{Schema Réseaux}
     \label{SN}
 \end{center}
 \subsubsection{Liaisons MQTT}
-Afin d'envoyer les données du microcontroleur vers le serveur j'ai choisi le protocle MQTT et ce pour deux raisons.La premier est que le projet seras amener à évoluer et contiendras plusieurs capteur récoltant la même données à des endroits different de la ruche. Ainsi avec le systéme de topics, on pouras identifier facilement ces différent capteur. La deuxième est que la solution envisager pour le site web, et la base de données, est trés facilement couplabe avec ce protocole. 
-Ci-dessous on peut voire le code utiliser pour envoyer sur les topic "cadre3/temperature" et "cadre3/humidite". 
+Afin d'envoyer les données du microcontroleur vers le serveur j'ai choisi le protocole MQTT, et ce pour deux raisons. La première est que le projet sera amené à évoluer et contiendra plusieurs capteurs récoltant la même donnée à des endroits differents de la ruche. Ainsi avec le systéme de topics, on pourra identifier facilement ces différents capteurs. La deuxième est que la solution envisagée pour le site web, et la base de données, est trés facilement couplable avec ce protocole. 
 
 \subsubsection{Liaisons UDP}
-Afin de transmetre les données du piezo aux serveur, j'ai choisis d'effectuer une liaisons UDP. J'ai choisi ce protocole car la liaisons n'as pas besoins de haute fideliter. L'arduino envoie donc sur le serveur les données du piezo. Le programme ci-dessous crées une crées une socket et attends que l'arduino envoie ces données. 
+Afin de transmetre les données du piezo au serveur, j'ai choisis d'effectuer une liaisons UDP. J'ai choisi ce protocole car la liaison n'as pas besoin d'accusé de réception. L'Arduino envoie donc sur le serveur les données du piezo. Le programme ci-dessous crée une socket et attend que l'Arduino envoie ces données. 
 \begin{scriptsize}
 \begin{lstlisting}
 
@@ -285,13 +283,9 @@ Afin de transmetre les données du piezo aux serveur, j'ai choisis d'effectuer u
 \end{lstlisting}
 \end{scriptsize}
 \section{Conclusion}
-Lors de ces semaines de travail j'ai rencontrer plusieurs difficulter. Tout d'abords l'envoie l'acquisition des données envoyer par le piézo-éléctrique fus complexe dans un premier temps. Ce probléme était imputer à l'Arduino que j'utilisai dont les broche analogique était defaillante. La deuxième difficutlé fut sur l'utilisation de la librairie fft. En effet certains détaille m'avais échapper lors de ma premier lecture de la librairie.
-En conclusion, maintenent que les données on été récolter et achemineril faut pouvoire les afficher sur un site web. Il me reste aussi à effectuer un montage final plus propre pour la partie electronique du système. 
+Lors de ces semaines de travail j'ai rencontré plusieurs difficultés. Tout d'abord l'envoie et l'acquisition des données envoyées par le piézo-éléctrique furent complexe dans un premier temps. Ce problème était imputable à l'Arduino que j'utilisais dont les broches analogiques était defaillantes. La deuxième difficutlée fût sur l'utilisation de la librairie fft. En effet certains détails m'avaient échappés lors de ma première lecture de la librairie.
+En conclusion, maintenant que les données ont été récoltées et acheminées il faut pouvoir les afficher sur un site web. Il me reste aussi à effectuer un montage final plus propre pour la partie electronique du système. 
 \newpage
-\appendix
-		
-	\label{code}
-
 \listoffigures
 
 \end{document}
