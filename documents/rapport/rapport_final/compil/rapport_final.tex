@@ -168,25 +168,24 @@ Je commencerait donc par vous présenter l'environement dans le quel j'ai travai
 \newpage
 \section{Infrastructure}
 \subsection{Mise en situation}
-Mon stage prend place dans le projet SuperBeeLive 
-
-J'ai passer la majoriter de mon stage au rucher, lieu ou sont entreposer une dizaine de ruche et ou la majoriter du projet SuperBeeLive prend place.
-Nous étions plusieur stagiaire installer à cet endroit. J'ai donc pu colaborer avec plusieurs d'entre eux notament sur la redaction de nos rappeur. Comme vous pouvez le voire sur les figures \ref{Intérieur du rucher} et \ref{Extérieur du rucher}  nous étions installé dans un préfabriqué (climatiser et fibrer) situer à coter des ruches.
+Mon stage prend place dans la continuiter du projet SuperBeeLive. J'ai passer la majoriter de mon stage au rucher, lieu ou sont entreposer une dizaine de ruche et ou la majoriter du projet SuperBeeLive prend place.
+Nous étions plusieur stagiaire installer à cet endroit. J'ai donc pu colaborer avec plusieurs d'entre eux notament sur la redaction de nos rappeur. Comme vous pouvez le voire sur les figures \ref{intruch} et \ref{extruch}  nous étions installé dans un préfabriqué (climatiser et fibrer) situer à coter des ruches.
 
 \begin{center}	
 \includegraphics[scale=0.075]{../img/interieur_rucher.jpg}
 \captionof{figure}{Intérieur du rucher}
-\label{image1}
+\label{intruch}
 \includegraphics[scale=0.075]{../img/exterieur_rucher.jpg}
 \captionof{figure}{Extérieur du rucher}
-\label{image2}
+\label{extruch}
 \end{center}
 
 
 \newpage
 \section{Organisation}
 \subsection{Notion}
-Afin de pouvoir m'organiser et avoir un suivi de mon activité tout au long du stage, j'ai mis en place un Gantt sous la forme d'une page Notion.
+Afin de pouvoir m'organiser et suivre l'avancer de mon activité tout au long du stage, j'ai mis en place un plusieur outil sous la forme d'une page Notion.
+Notion est une application ayant plusieur utiliter. Dans mon cas je m'en suis servis pour plannifier mes taches, stocker mes notes et d'avoire une vision global du travail à venir. 
 Chaque page que j'ai créé sur notion possède une fonction précise. Je vais donc vous présenter brièvement chacune d'entre elles.
 
 \subsubsection{Calendrier}
@@ -213,19 +212,12 @@ Cet onglet contient une description plus détaillée des tâches. J'y stocke aus
 \label{Description des taches}
 \end{center}
 
-\subsubsection{Gantt}
-La dernier fiche accessible est la fiche "Gantt" qui me permet surtout de m'organiser sur ma semaine. 
-\begin{center}	
-\includegraphics[scale=0.35]{../img/notiongantt.png}
-\captionof{figure}{Gantt}
-\label{Gantt}
-\end{center}
-\newpage 
-
 \newpage
 
 \section{Topologie Réseau}
+Comme nous pourons le voire dans cette partie le réseau peut étre décomposer en plusieur partie. Le rucher ou ce trouve SuperBeeLive et donc les caméras et appareil de messures. Et un serveur de stockage et de traitement au quel nous somme relier par deux fibre. 
 \subsection{Rucher}
+Dans le rucher on peut retrouver deux types d'équipements reliés au réseau. En premier lieu retrouvons 8 caméras ethernet délivrant un flux de 30 ips noir et blanc d'une résoltion de 1080 pixel. Le deuxième équipement est le micro-controleur récoltant les données des capteurs. Pour l'instannt cellui-ci est un arduino Uno muni d'un shield Ethernet. 
 \subsection{Serveur}
 \subsection{Microcontroleur}
 
@@ -251,11 +243,10 @@ De ces trois critères, j'ai retenue deux solutions possibles.
 Tout d'abord un arduino muni d'un shield Ethernet pourrait nous permettre dans un premier temps d'avoir un système 
 connecté à internet et simple à mettre en place.
 Dans un second temps, j'ai pensé à un Esp32 qui permettrait de faire transiter les données en Wifi et qui est plus petit. 
-Étant familiarisé avec les deux solutions je n'avais pas de préférence. J'ai cependant commencé à travailler sur l'arduino, car j'avais
-le matériel à disposition.
+Étant familiarisé avec les deux solutions je n'avais pas de préférence. J'ai cependant commencé à travailler sur l'arduino, car j'avais le matériel à disposition.
 
 \subsubsection{Capteur de température et d'hygrométrie }
-Pour répondre à ce besoin, j'ai opté pour un Si7021. J'ai fait ce choix, car le capteur était directement à disposition et que je l'avais déjà programmé. Leurs caractéristiques sont les suivantes :\\
+Pour répondre à ce besoin, j'ai opté pour un Si7021. J'ai fait ce choix, car le capteur était directement à disposition et que je l'avais déjà utilisé. Leurs caractéristiques sont les suivantes :\\
 \\
 Température :\\
 \begin{center}
