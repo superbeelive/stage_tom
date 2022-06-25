@@ -49,8 +49,6 @@ int main (){
 		buffer[n] = '\0';
 		printf("Client : %s\n", buffer);
 		traitementData(data,buffer,20,4);
-		sendto(sockfd, "ACK", strlen("ACK"),MSG_CONFIRM, (const struct sockaddr *)&cliaddr,sizeof(cliaddr));
-	
 	}
 	return 0;
 }
