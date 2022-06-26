@@ -133,25 +133,25 @@
 
 \maketitle
 
-\newpage
+%\newpage
 \section*{Remerciments}
 J’adresse mes sincères remerciements aux personnes qui m’ont permis de réaliser ce stage.
 Je souhaite remercier M. Matthieu Rousset, initiateur du projet SuperBeeLive,de m’avoir accepté au sein de son équipe.
 Je souhaite également remercier Mme Olivia Serenelli-Pesin, qui a su m’encadrer et me guider. tout au long de ce stage
 Je remercie également M. Sebastien Druon pour m’avoir conseillé et aiguillié quand j'ai rencontré des difficulté lors de mes mission.
 Et enfin je remercie vivement toute l’équipe de pédagogique de Béziers, qui a su m'enseigner le savoir utile lors de ce stage.
-\newpage
+%\newpage
 
 \section*{Resumer}
 Ce stage c'est dérouler aux CNRS et à été encadrer par M. Matthieu Rousset chercheur à l'IBMM (Institut des Biomolécules Max Mousseron). \\
 Si j'ai choisi ce stage c'est tout d'abords pour le sujet atypique reliant biologie, technologie et écologie. Ma seconde motivation était l'envie de découvrire plus en profondeur le monde de la recherche.\\ 
 Ma mission principal lors de ce stage était de trouver un moyen de récolter les données de vibration et de températures et de les envoyer sur une basse de données afin qu'elle soit récuperable et visualisable sur un site web. Le site web et la basse de donnée n'était cependant pas compris dans ma mission. \\
 Cette mission à été réaliser dans sont ensemble et ma permis d'acquerire des compétence en électronique et d'appliquer les connaisance acquise lors de mon DUT. 
-\newpage
+%\newpage
 \section*{Remerciments}
 \tableofcontents
 
-\newpage
+%\newpage
 \section{Introduction}
 \subsection{Mise en situation}
 Mon stage prend place dans la continuité du projet SuperBeeLive. J'ai passer la majorité de mon stage au rucher, lieu ou sont entreposé une dizaine de ruches et ou la plus grand partie du projet SuperBeeLive prend place.
@@ -187,7 +187,7 @@ Ce rapport fera état de l'activité réalisée lors du stage ainsi que l'état 
 \\
 Je commencerai par vous décrire la manière dont je me suis organisé. Je décrirai dans une seconde partie aussi le réseau sur lequel j'ai travaillé, ainsi que les choix faits quand aux protocoles utilisés. Une troisième partie abordera les montages électroniques que j'ai découverts et testés lors de ce stage. Une dernier partie abordera la programmation des différents composants du système. Enfin, je conclurai en abordant les problèmes rencontrés ainsi que les améliorations possibles à mon travail.
 
-\newpage
+%\newpage
 \section{Organisation}
 Etant donné la durée assez courte du stage j'ai dû mettre en place des outils afin de pouvoir m'organiser et suivre l'avancée de mon activité tout au long du stage.
 \\
@@ -213,7 +213,7 @@ La page "liste des tâches" regroupe toutes les tâches effectuées et à effect
 \captionof{figure}{Liste des tâches}
 \label{Liste des taches}
 \end{center}
-\newpage
+%\newpage
 
 \section{Topologie Réseau}
 Comme nous pourons le voire dans cette partie le réseau peut étre décomposer en plusieur partie. Le rucher ou ce trouve SuperBeeLive et donc les caméras et appareil de messures. Et un serveur de stockage et de traitement au quel nous somme relier par deux fibre. 
@@ -235,7 +235,7 @@ Afin de transmetre les données du piezo au serveur, j'ai choisis d'effectuer un
 Elle seront ensuite traiter et renvoyer à la base de données. 
 Le traitement aurait pu ce faire sur l'Arduino mais les calcule étant asser lourd j'ai préferer les délocaliser sur une machine plus performente. Ainsi le role du microcontroleur est uniquement de récolter et envoyer les données. 
 
-\newpage
+%\newpage
 \section{Eléctronique}
 Lors de ce stage j'ai eux la chance de pouvoire effectuer de l'électronique. Afin que vous puisier visualiser les différent montage, vous trouverez tout au long de cette partie des schémas fait sous fritzing et des schémas plus rigoureux effectuer à l'aide de Kicad. Je ceommencerait donc par vous présenter mes choix quant aux composant utiliser. Une deuxiéme partie abordera les montage réaliser afin d'amplifier le signal du piezo-électrique.
 \subsection{Choix des composants}
@@ -305,6 +305,11 @@ Les vibrations dans les matériaux qui sont probablement détectées par plusieu
 
 Etant donné le temps à ma disposition à ce moment, j'ai préféré me baser sur ce résultat pour la commande des piézo-électriques et d'éfectuer les premier test avec le capteur qui était disponible. 
 
+\subsubsection{Amplificateur opérationel} 
+Comme évoquer précedement j'ai eux à effectuer des montages avec des amplificateur opérationel (AOP). Le models que j'avais à ma disposition etait le LM342AN. Ce model prend la forme d'une puce à 14 broche et contient en tout 4 AOP disctint. 
+
+\subsection{Experimentation}
+
 \subsubsection{Capteur Piézo-Electrique}
 
 Afin d'analyser les caractéristiques du capteur fournis, j'ai commencé par chercher des documents en rapport avec celui-ci. Les recherches n'ayant pas 
@@ -322,14 +327,9 @@ Par la suite j'ai donc cherché comment effectuer une amplification du signal. J
 	\label{image4}
 \end{center}
 
-\newpage
-\subsubsection{Amplificateur opérationel} 
-Comme évoquer précedement j'ai eux à effectuer des montages avec des amplificateur opérationel (AOP). Le models que j'avais à ma disposition etait le LM342AN. Ce model prend la forme d'une puce à 14 broche et contenant en tout 4 AOP disctint. 
 
-\subsection{Montages AOP}
+\subsubsection{Montages AOP}
 Lors de ce stage j'ai du faire des recherches quand au dimensionnement d'un montage amplificateur. Ce besoin s'était fait ressentir quand je m'étais rendu compte que le signal émis par le piézo-électrique n'arrivait pas à être capté par l'Arduino.  Dans cette partie nous verrons tout d'abord le cheminement effectuer afin d'obtenire un montage fonctionnel. 
-
-\subsubsection{Amplificateur de mesure}
 
 Afin d'amplifier le signal mes encadrant mon coneiller de me renseigner sur les montages amplificateur de mesure. Ces montages sont très souvent utilisé afin d’amplifier le signal de sortie d’un capteur ayant une tension trop faible.
 Il existe plusieurs montages amplificateur de mesures. Dans mon cas, j’ai expérimenter 2 d'entre eux. Un utilisant 2 AOP, visible figure \ref{2AOP}, et un second en utilisant 3, visible lui figure \ref{3AOP}. 
@@ -348,7 +348,7 @@ Il existe plusieurs montages amplificateur de mesures. Dans mon cas, j’ai exp�
 
 Aprés avoir réussi à effectuer ce montage, j’ai pu remarquer que la sensibilité du capteur avait diminué. Ceci a eu pour effet de d’empêcher la visualisation d’impulsion créée lors de petits frottements.Ce probleme étant selon moi imputable à 2 élément. Tout d'abords une erreur de cablage de ma part, ou le model d'AOP que j'utilisait ne corespondait pas à cette utilisation. Etant données que nous cherchon surtout à amplifier les petit signaux, j’ai décidé de changer de montage.
 
-\subsubsection{Montage actuel}
+\subsubsection{Montage final}
 Le piezo-electrique utilisé jusqu’à maintenant était fourni avec un module. Celui-ci ne changeait rien au signal et pour cause, les composants sur lui n’étaient pas totalement connectés. Cependant, après avoir effectué des modifications sur celui-ci le signal m'a paru beaucoup plus net.
 J’ai par la suite effecuté le montage visible figure \ref{MTGFINAL} et figure \ref{SMG}.
 \\
@@ -395,17 +395,16 @@ On peut remarquer toujour sur la figure \ref{VMOMVM} un leger signal alternatif 
 \label{M}
 \end{center}
 
-\newpage
+%\newpage
 \section{Programmation}
-Lors de ce stage j'ai été amener à faire plusieur programme. En \ref{Annexe} vous trouverez tout les codes réaliser. Je vais donc commencer par vous présenter la récolte des données et l'envoie de celle-ci. Dans une seconde partie je vous parlerait du traitement des données relatif au piezo. 
+Lors de ce stage j'ai été amener à faire plusieur programme. En annexe vous trouverez tout les codes réaliser. Je vais donc commencer par vous présenter la récolte des données et l'envoie de celle-ci. Dans une seconde partie je vous parlerait du traitement des données relatif au piezo. 
 
 \subsection{Fonctionnement du programme}
-Le progamme injecter dans l'arduino respect l'algorigramme suivant. 
-
+Le progamme injecter dans l'arduino respect l'algorigramme figure \ref{ALG}. Dans le programme j'ai utiliser plusieur librairie. Tout d'abords la librairie "Ethernet.h" et "EthernetUDP.h"  m'on repectivement  permis d'établire une connexion filiaire via le shield ethernet et de forger des trame UDP facilement. La librairie "PubSubClient.h" me donne accées à des fonction relative au protocole MQTT. Enfin la librairie "AdafruitSi7021.h" me permet de récolter les données du capteur de température et d'humiditer.  
 \begin{center}	
 \includegraphics[scale=1]{../img/algorigrame.png}
 \captionof{figure}{Algorigrame}
-\label{M}
+\label{ALG}
 \end{center}
 \subsection{Traitement}
 
@@ -415,228 +414,13 @@ La raisons pour la quel j'ai decider de faire une transformer de fourier est tou
 Le programme que j'ai écrits pour faire cella est disponible en annexe .  
 
 
-\newpage
+%\newpage
 \section{Conclusion}
 En conclusion, ce stage à été formateur pour moi tant dans l'approche que j'ai du mettre en place pour solutionner les probléme possé, que dans les différents domaines aborder. J'ai cependant rencontrer des difficulter sur certaine partie. En effet mes compétence en éléctronique ce limitant à des basique, j'ai abordées des composants complex comme l'amplificateur-opérationel avec certaine difficulter. J'ai cependant pu conter sur l'aide de mes encadrants afin de me diriger vers les bonnes sources d'information.
 
 
-\newpage
+%\newpage
 \listoffigures
-
-\newpage
-\section*{Annexe}
-\subsection*{Code}
-\subsubsection*{Récolte et envoie des données}
-\begin{scriptsize}
-\begin{lstlisting}
-
-//Libraries
-// Communication serie on utilise :
-// minicom -b 9600 -o -D /dev/ttyUC0
-
-
-#include <SPI.h>
-#include <PubSubClient.h>
-#include <Ethernet.h>
-#include <EthernetUdp.h>
-#include <Adafruit_Si7021.h>
-#define PORT_MQTT 1883
-#define PORT_UDP 8888
-
-
-void udpSendChar(char * data);
-void gatherVibration(char * fdata, int nbEchantillon, int nbVirgule, double periodeEchantillonageMs);
-void mqttSendHumTmp(int nbVirgule, Adafruit_Si7021 sensor);
-void callback(char* topic, byte* payload, unsigned int length);
-int beginEthSen();
-int piezo = 0;
-Adafruit_Si7021 sensor = Adafruit_Si7021();
-String request ;
-unsigned long refreshCounter  = 0;
-byte mac [6] = {0x54, 0x34, 0x41, 0x30, 0x30, 0x31};
-IPAddress ipMqtt(194, 199, 227, 239) ;
-IPAddress ipUdp(10, 24, 4, 127) ;
-EthernetUDP Udp;
-EthernetClient ethclient; 
-PubSubClient client(ipMqtt,PORT_MQTT,callback,ethclient); 
-
-void setup() 
-{
-	Serial.begin(9600);
-	if(!beginEthSen()){
-		Serial.println("Erreur");
-	}
-	client.connect("arduino");
-}
-void loop() 
-{
-	char data[320];
-	mqttSendHumTmp(2,sensor);
-	gatherVibration(data,80,2,2);
-	delay(1000);
-}
-
-
-// Lance tout les fonction. Ehternet, UDP, MQTT et le capteur. 
-int beginEthSen()
-{
-	int error = 0;
-	if (!sensor.begin()) 
-	{
-		Serial.println("Did not find Si7021 sensor!");
-		error=1;
-	}
-
-	Serial.println(F("Initialize System"));
-	Ethernet.begin(mac);
-
-	while (!Ethernet.begin(mac)) 
-	{
-		Serial.println(F("failed. Retrying in 1 secondsi."));
-		error=1;
-	}
-
-	pinMode(2, OUTPUT);
-	pinMode(0, INPUT);
-	Serial.print(F("IP Address: "));
-	Serial.println(Ethernet.localIP());
-	Udp.begin(PORT_UDP);
-	if(error=1)
-		return -1;
-
-	return 0;
-}
-
-
-// Cette fonction recolte et envoie l'humiditer et la température en MQTT. nbVirgule permet de spécifier le nombre de valeur apres la virgule.
-void mqttSendHumTmp(int nbVirgule,Adafruit_Si7021 sensor)
-{
-
-	double hum,temp;
-	char Ctemp[2+nbVirgule];
-	char Chum[2+nbVirgule];
-	hum = sensor.readHumidity();
-	temp = sensor.readTemperature();
-	dtostrf(temp,2,nbVirgule,Ctemp);
-	dtostrf(hum,2,nbVirgule,Chum);
-  
-  Serial.println("HUMIDITER ET TEMPERATURE");
-	Serial.println(Chum);
-	Serial.println(Ctemp);
-	if(!client.publish("cadre3/temperature",Ctemp))
-	{
-		Serial.println("error");
-	}
-	if(!client.publish("cadre3/humidite",Chum))
-	{
-		Serial.println("error");
-	}
-
-}
-
-void gatherVibration(char * fdata, int nbEchantillon, int nbVirgule, double periodeEchantillonageMs)
-{
-	// Afin d'avoire le nombre de caractere je fait le nombre de chiffre apres la virgule plus deux
-	// qui represente mon premier digits et ma virgule.
-	int nbChar = nbVirgule+2;
-	char tmp[nbEchantillon][nbChar];
-	char data2[nbEchantillon*nbChar];
-	double centsValeurs[nbEchantillon];
-	int i,y;
-	for(i=0;i<nbEchantillon;i++){
-		centsValeurs[i]=analogRead(piezo);
-		centsValeurs[i]=(centsValeurs[i]*5)/1023;
-		delay(periodeEchantillonageMs);
-	}
-	delay(2000);
-	for(i=0;i<nbEchantillon;i++){
-		dtostrf(centsValeurs[i],nbChar,nbVirgule,tmp[i]);
-		for(y=0;y<nbChar;y++){
-			data2[(nbChar*i)+y]=tmp[i][y];
-		}	
-	}
-	Serial.println(data2);
-	Udp.beginPacket(ipUdp,PORT_UDP);
-	Udp.write(data2);
-	Udp.endPacket();
-}
-
-void callback(char* topic, byte* payload, unsigned int length){
-
-}
-\end{lstlisting}
-\end{scriptsize} 
-\subsubsection*{Transformer de fourrier}
-\begin{scriptsize}
-\begin{lstlisting}
-
-#include <stdio.h>
-#include <complex.h>
-#include <fftw3.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <arpa/inet.h>
-#include <netinet/in.h>
-//#include <arduinoUDP.h>
-
-#define PORT	 8888
-#define MAXLINE 2048
-
-void traitementData(double * valeurs, char * charData, int taille, int nbChar);
-
-
-int main (){
-
-	printf("Début du programme. \n");
-	int sockfd;
-	char buffer[MAXLINE];
-	struct sockaddr_in servaddr, cliaddr;
-	double data[20];
-	if ( (sockfd = socket(AF_INET, SOCK_DGRAM, 0)) < 0 ) {
-		perror("Erreur lors de la creation de la socket");
-		exit(EXIT_FAILURE);
-	}
-
-	memset(&servaddr, 0, sizeof(servaddr));
-	memset(&cliaddr, 0, sizeof(cliaddr));
-
-	servaddr.sin_family = AF_INET; 
-	servaddr.sin_addr.s_addr = INADDR_ANY;
-	servaddr.sin_port = htons(PORT);
-
-	if ( bind(sockfd, (const struct sockaddr *)&servaddr,sizeof(servaddr)) < 0 )
-	{
-		perror("bind failed");
-		exit(EXIT_FAILURE);
-	}
-
-	int len, n;
-
-	len = sizeof(cliaddr); //len is value/result
-	for(;;){
-		n = recvfrom(sockfd, (char *)buffer, MAXLINE,MSG_WAITALL, ( struct sockaddr *) &cliaddr,&len);
-		buffer[n] = '\0';
-		printf("Client : %s\n", buffer);
-		traitementData(data,buffer,20,4);
-	}
-	return 0;
-}
-
-void traitementData(double * valeurs, char * charData, int taille, int nbChar){
-	int i,y;
-	char tmp[4];
-	printf("\n");
-	for(i=0;i<taille;i++){
-		for(y=0;y<nbChar;y++)
-			tmp[y]=charData[(i*nbChar)+y];
-		valeurs[i]=atof(tmp);
-		printf("%f ",valeurs[i]);
-	}
-	printf("\n ");
-}
-\end{lstlisting}
-\end{scriptsize} 
+%\newpage
+%\input{annexe.tex}
 \end{document}
