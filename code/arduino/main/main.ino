@@ -23,6 +23,7 @@ Adafruit_Si7021 sensor = Adafruit_Si7021();
 String request ;
 unsigned long refreshCounter  = 0;
 byte mac [6] = {0x54, 0x34, 0x41, 0x30, 0x30, 0x31};
+
 // Pour changer les addresse du serveur il faut changer les IP si dessous.
 IPAddress ipMqtt(194, 199, 227, 239) ;
 IPAddress ipUdp(194, 199, 227, 239) ;
@@ -43,7 +44,9 @@ void loop()
 {
 	char data[320];
 	mqttSendHumTmp(2,"cadre3/humidite","cadre3/temperature",sensor);
-	gatherVibration(data,"cadre3/vibration",80,2,1);
+  	delay(500);
+	gatherVibration(data,"cadre3/vibration",50,2,10);
+  	delay(500);
 }
 
 
@@ -122,10 +125,7 @@ void gatherVibration(char * fdata, char * topic, int nbEchantillon, int nbVirgul
 		dtostrf(centsValeurs[i],nbChar,nbVirgule,tmp[i]);
 		for(y=0;y<nbChar;y++){
 			data2[(nbChar*i)+y]=tmp[i][y];
-			if(!client.publish(topic,data2[(nbChar*i)+y]))
-			{
-				Serial.println("Erreur d'envoie vibration");	
-			}
+			
 		}	
 	}
 	Serial.println(data2);
