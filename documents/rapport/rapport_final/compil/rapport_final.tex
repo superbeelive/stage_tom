@@ -122,8 +122,9 @@
 	\\
 	\large{RT2 : Promotion 2020-2022}
 	\\
-         \includegraphics[width=4cm]{../../../logo/LIRMMlogo.png}  \hspace{7cm}
-         \includegraphics[width=4cm]{../../../logo/IBMMlogo.jpg}  \hspace{7cm}
+	\large{Sujet du stage : \textbf{}}
+	\includegraphics[width=4cm]{../../../logo/LIRMMlogo.png} \hspace{7cm}
+	\includegraphics[width=4cm]{../../../logo/IBMMlogo.jpg}  \hspace{7cm}
 }
 \author{
 	\date{}
@@ -138,14 +139,14 @@
 J’adresse mes sincères remerciements aux personnes qui m’ont permis de réaliser ce stage.
 Je souhaite remercier M. Matthieu Rousset, initiateur du projet SuperBeeLive, de m’avoir accepté au sein de son équipe.
 Je souhaite également remercier Mme Olivia Serenelli-Pesin, qui a su m’encadrer et me guider, tout au long de ce stage.
-Je remercie également M. Sébastien Druon pour m’avoir conseillé et aiguillié quand j'ai rencontré des difficultés lors de mes missions.
-Et enfin je remercie vivement toute l’équipe pédagogique de Béziers, qui a su m'enseigner le savoir utile lors de ce stage.
+Je remercie également M. Sébastien Druon pour m’avoir conseillé et aiguillier quand j'ai rencontré des difficultés lors de mes missions.
+Et enfin je remercie vivement toute l’équipe pédagogique de Béziers, qui a su m'enseigner les savoirs utiles lors de ce stage.
 \newpage
 
 \section*{Résumé}
 Ce stage s'est déroulé aux CNRS et a été encadré par M. Matthieu Rousset, chercheur à l'IBMM (Institut des Biomolécules Max Mousseron). \\
 Si j'ai choisi ce stage, c'est tout d'abord pour le sujet atypique reliant biologie, technologie et écologie. Ma seconde motivation était l'envie de découvrir plus en profondeur le monde de la recherche.\\ 
-Ma mission principale lors de ce stage était de trouver un moyen de récolter les données de vibrations d'humidités et de températures et de les envoyer sur une base de données afin qu'elle soit récupérable et visualisable sur un site web. Le site web et la base de donnée n'étaient cependant pas compris dans ma mission. \\
+Ma mission principale lors de ce stage était de trouver un moyen de récolter les données de vibration d'humidité et de températur et de les envoyer sur une base de données afin qu'elle soit récupérables et visualisables sur un site web. Le site web et la base de donnée n'étaient cependant pas compris dans ma mission. \\
 Cette mission a été réalisée dans son ensemble et m'a permis d'acquerir des compétences en électronique et d'appliquer les connaissances acquises lors de mon DUT. 
 \newpage
 \tableofcontents
@@ -165,7 +166,7 @@ Nous étions plusieurs stagiaires installés à cet endroit. J'ai donc pu collab
 \label{extruch}
 \end{center}
 \subsection{Sujet du stage}
-Ce rapport fera état de l'activité réalisée lors du stage ainsi que l'état d'avancement des différentes mission confiées. Ma missions principale était la suivante : (Extrait de "sujets\_stage\_tom" de Mme Olivia SERENELLI-PESIN) 
+Ce rapport fera état de l'activité réalisée lors du stage ainsi que l'état d'avancement des différentes mission confiées. Ma mission principale était la suivante : (Extrait de "sujets\_stage\_tom" de Mme Olivia SERENELLI-PESIN) 
 \\
 \\
 \fbox{
@@ -188,11 +189,11 @@ Je commencerai par vous décrire la manière dont je me suis organisé. Je décr
 
 \newpage
 \section{Organisation}
-Etant donné la durée assez courte du stage, j'ai dû mettre en place des outils afin de pouvoir m'organiser et suivre l'avancée de mon activité tout au long du stage.
+Etant donnée la durée assez courte du stage, j'ai dû mettre en place des outils afin de pouvoir m'organiser et suivre l'avancée de mon activité tout au long du stage.
 \\
 J'ai cependant décidé d'adopter un nouvel outil afin d'organiser mon temps de travail. Je vous présenterai donc dans la prochaine partie le logiciel Notion, ainsi que mon utilisation de celui-ci.
 \subsection{Notion}
-Notion est une application web ayant plusieurs utilités. Dans mon cas, je m'en suis servi pour organiser le stage que ce soit en planifiant mes tâches, stockant mes notes ou en ayant une vision globale du travail à venir. Le plus important avec cet outils selon moi est la possibilités d'interconnecter chaque page entre elles, cela permettant un re-croisement des données et une personnalisation poussée.  
+Notion est une application web ayant plusieurs utilités. Dans mon cas, je m'en suis servi pour organiser le stage que ce soit en planifiant mes tâches, stockant mes notes ou en ayant une vision globale du travail à venir. Le plus important avec cet outils selon moi est la possibilité d'interconnecter chaque page entre elles, cela permettant un re-croisement des données et une personnalisation poussée.  
 \\
 Chaque page, que j'ai créée sur Notion, possède une fonction précise. Je vais donc vous présenter chacune d'entre elles.
 
@@ -215,9 +216,9 @@ La page "liste des tâches" regroupe toutes les tâches effectuées et à effect
 \newpage
 
 \section{Topologie Réseau}
-Comme nous pourons le voir dans cette partie, le réseau peut étre décomposé en plusieurs partie. Le rucher où se trouve SuperBeeLive et donc les caméras et appareil de mesures. Et un serveur de stockage et de traitement au quel nous sommet reliés par deux fibres. 
+Comme nous pourons le voir dans cette partie, le réseau peut être décomposé en plusieurs partie. Le rucher où se trouve SuperBeeLive et donc les caméras et appareil de mesures. Et un serveur de stockage et de traitement au quel nous sommet reliés par deux fibres. 
 \subsection{Ruche}
-Dans le rucher, on peut retrouver deux types d'équipements reliés au réseau. En premier lieu, nous retrouvons 8 caméras ethernet délivrant un flux de 30 ips noir et blanc d'une résoltion de 1080 pixels. Le deuxième équipement est le micro-contrôleur récoltant les données des capteurs.  
+Dans le rucher, on peut retrouver deux types d'équipements reliés au réseau. En premier lieu, nous retrouvons 8 caméras ethernet délivrant un flux de 30 ips noir et blanc d'une résolution de 1080 pixels. Le deuxième équipement est le micro-contrôleur récoltant les données des capteurs.  
 \subsection{Interconnexion}
 Comme dit précédemment le système est composé de plusieurs éléments. Tout d'abord, l'Arduino récolte les données et les envoie aux autres composantes. La température et l'humidité sont envoyées via MQTT vers le serveur tandis que les données du piezo sont envoyées via UDP. Une fois traité, ces derniers sont aussi envoyés sur un topic MQTT.
 
@@ -230,7 +231,7 @@ Comme dit précédemment le système est composé de plusieurs éléments. Tout 
 Afin d'envoyer les données du micro-contrôleur vers le serveur, j'ai choisi le protocole MQTT, et ce pour deux raisons. La première est que le projet sera amené à évoluer et contiendra plusieurs capteurs récoltant la même donnée à des endroits différents de la ruche. Ainsi, avec le systéme de topics, on pourra identifier facilement ces différents capteurs. La deuxième est que la solution envisagée pour le site web et la base de données, est trés facilement couplable avec ce protocole. 
 
 \subsubsection{Liaisons UDP}
-Afin de transmettreles données du piezo au serveur, j'ai choisi d'effectuer une liaison UDP. J'ai choisi ce protocole car la liaison n'a pas besoin d'accusé de réception. L'Arduino envoie donc sur le serveur les données du piezo.
+Afin de transmettre les données du piezo au serveur, j'ai choisi d'effectuer une liaison UDP. J'ai choisi ce protocole car la liaison n'a pas besoin d'accusé de réception. L'Arduino envoie donc sur le serveur les données du piezo.
 Elle seront ensuite traitée et renvoyées à la base de données. 
 Le traitement aurait pu se faire sur l'Arduino mais les calculs étant assez lourds, j'ai préféré les délocaliser sur une machine plus performante. Ainsi, le role du micro-contrôleur est uniquement de récolter et envoyer les données. 
 
@@ -282,7 +283,7 @@ Pour répondre à ce besoin, j'ai opté pour un Si7021. J'ai fait ce choix, car 
 \end{center}
 
 \subsubsection{Capteur de vibration}
-Le capteur de vibration est la partie que je connais le moins du projet. J'ai pu trouvé deux solutions.\\
+Le capteur de vibration est la partie que je connais le moins du projet. J'ai pu trouver deux solutions.\\
  Une première à l'aide d'un capteur piézo-électrique et une seconde avec un  microphone. Ces deux capteurs étant les seules possibilités que j'avais à ma disposition, 
  j'ai décidé de les utiliser afin de savoir si elles pouvaient répondre aux besoins du projet.\\
 \\
@@ -292,9 +293,6 @@ Le capteur de vibration est la partie que je connais le moins du projet. J'ai pu
 
 Afin de pouvoir mesurer avec plus de précisiont les vibrations émises par les abeilles, j'ai pris conseil auprès de M. Rousset qui m'a fourni différents articles sur le sujet.
 Après une lecture de ces documents, je suis arrivé à une estimation de la plage de fréquence de communication des abeilles dans la ruche à [200Hz-1000Hz]. Je me base sur l'extrait d'un échange avec M. Rousset pour déduire cette plage de valeurs : \\ 
-\\
-\\
-
 \fbox{
 	\begin{minipage}{17cm} 
 Les vibrations dans les matériaux qui sont probablement détectées par plusieurs organes/structures dans le corps de l’abeille. Par exemple l’organe subgénual (subgenual organ) localisé dans la patte est sensible aux vibrations entre 200 et 1000Hz.
@@ -370,7 +368,7 @@ Il est composé d’un suiveur et d’un amplificateur non-inverseur avec un coe
 Enfin, un condensateur se trouvant en sortie de circuit nous permet d’éliminer la composante continue ajoutée par les AOP à notre signal.
 
 
-\subsubsection{Résultat}
+\subsubsection{Résultats}
 Avec le montage vu précédemment, nous obtenons plusieurs résultats probants.
 Tout d'abord, nous pouvons voir figure \ref{VWOMVM} le signal en sortie du montage quand aucun évènement ne se produit.
 Ensuite, figure \ref{F}, nous pouvons voir la réaction après un léger frottement effectué avec un câble visible figure \ref{M}. 
