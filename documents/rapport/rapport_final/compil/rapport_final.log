@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.5.30)  28 JUN 2022 18:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.5.30)  15 JUL 2022 18:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -382,29 +382,29 @@ File: l3backend-pdftex.def 2022-04-14 L3 backend support: PDF output (pdfTeX)
 (./rapport_final.aux)
 \openout1 = `rapport_final.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Info: Redefining \degres on input line 131.
-LaTeX Info: Redefining \up on input line 131.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Info: Redefining \degres on input line 135.
+LaTeX Info: Redefining \up on input line 135.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 131.
+(lastpage)             ! on input line 135.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -463,7 +463,7 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count302
-Package hyperref Info: Link coloring OFF on input line 131.
+Package hyperref Info: Link coloring OFF on input line 135.
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -475,9 +475,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count303
 )
-LaTeX Info: Redefining \ref on input line 131.
-LaTeX Info: Redefining \pageref on input line 131.
-LaTeX Info: Redefining \nameref on input line 131.
+LaTeX Info: Redefining \ref on input line 135.
+LaTeX Info: Redefining \pageref on input line 135.
+LaTeX Info: Redefining \nameref on input line 135.
 
 (./rapport_final.out) (./rapport_final.out)
 \@outlinefile=\write4
@@ -488,27 +488,27 @@ Package caption Info: End \AtBeginDocument code.
 <../../../logo/IUTlogo.png, id=108, 1284.8pt x 642.4pt>
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 134.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 138.
 (pdftex.def)             Requested size: 113.81102pt x 56.90189pt.
 <../../../logo/UMlogo.png, id=110, 105.2733pt x 107.4414pt>
 File: ../../../logo/UMlogo.png Graphic file (type png)
 <use ../../../logo/UMlogo.png>
-Package pdftex.def Info: ../../../logo/UMlogo.png  used on input line 134.
+Package pdftex.def Info: ../../../logo/UMlogo.png  used on input line 138.
 (pdftex.def)             Requested size: 113.81102pt x 116.16284pt.
 <../../../logo/LIRMMlogo.png, id=111, 1097.60063pt x 364.36125pt>
 File: ../../../logo/LIRMMlogo.png Graphic file (type png)
 <use ../../../logo/LIRMMlogo.png>
-Package pdftex.def Info: ../../../logo/LIRMMlogo.png  used on input line 134.
+Package pdftex.def Info: ../../../logo/LIRMMlogo.png  used on input line 138.
 (pdftex.def)             Requested size: 113.81102pt x 37.77814pt.
 <../../../logo/IBMMlogo.jpg, id=112, 175.6161pt x 75.4017pt>
 File: ../../../logo/IBMMlogo.jpg Graphic file (type jpg)
 <use ../../../logo/IBMMlogo.jpg>
-Package pdftex.def Info: ../../../logo/IBMMlogo.jpg  used on input line 134.
+Package pdftex.def Info: ../../../logo/IBMMlogo.jpg  used on input line 138.
 (pdftex.def)             Requested size: 113.81102pt x 48.8667pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 134.
+(Font)              <14.4> on input line 138.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 134.
+(Font)              <7> on input line 138.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../../../logo/IUTlogo.png>
@@ -517,11 +517,11 @@ go.jpg>]
 <../../../logo/SBLlogo.png, id=125, 393.1488pt x 274.98735pt>
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 142.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 146.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 142.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 146.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 
@@ -535,11 +535,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [2 <../../../logo/SBLlogo.png>]
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 149.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 153.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 149.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 153.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 
@@ -563,11 +563,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 152.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 156.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 152.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 156.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 
@@ -582,61 +582,61 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <../img/interieur_rucher.jpg, id=177, 4175.6pt x 3131.7pt>
 File: ../img/interieur_rucher.jpg Graphic file (type jpg)
 <use ../img/interieur_rucher.jpg>
-Package pdftex.def Info: ../img/interieur_rucher.jpg  used on input line 159.
+Package pdftex.def Info: ../img/interieur_rucher.jpg  used on input line 163.
 (pdftex.def)             Requested size: 313.1565pt x 234.86737pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 160.
+(caption)                particular \caption on input line 164.
 See the caption package documentation for explanation.
 
 <../img/exterieur_rucher.jpg, id=178, 4175.6pt x 3131.7pt>
 File: ../img/exterieur_rucher.jpg Graphic file (type jpg)
 <use ../img/exterieur_rucher.jpg>
-Package pdftex.def Info: ../img/exterieur_rucher.jpg  used on input line 162.
+Package pdftex.def Info: ../img/exterieur_rucher.jpg  used on input line 166.
 (pdftex.def)             Requested size: 313.1565pt x 234.86737pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 163.
+(caption)                particular \caption on input line 167.
 See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--183
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--183
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--183
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--187
+Underfull \hbox (badness 10000) in paragraph at lines 171--191
 
  []
 
 
-Overfull \hbox (14.63138pt too wide) in paragraph at lines 167--187
+Overfull \hbox (14.63138pt too wide) in paragraph at lines 171--191
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--187
+Underfull \hbox (badness 10000) in paragraph at lines 171--191
 
  []
 
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 187.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 191.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 187.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 191.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -649,11 +649,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [5 <../img/interieur_rucher.jpg> <../img/exterieur_rucher.jpg>]
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 188.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 192.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 188.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 192.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 
@@ -668,21 +668,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <../img/notioncalender.png, id=193, 1252.68pt x 656.4525pt>
 File: ../img/notioncalender.png Graphic file (type png)
 <use ../img/notioncalender.png>
-Package pdftex.def Info: ../img/notioncalender.png  used on input line 201.
+Package pdftex.def Info: ../img/notioncalender.png  used on input line 205.
 (pdftex.def)             Requested size: 438.44456pt x 229.76181pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 202.
+(caption)                particular \caption on input line 206.
 See the caption package documentation for explanation.
 
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 208.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 212.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 208.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 212.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -697,21 +697,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 File: ../img/notionlistesdestaches.png Graphic file (type png)
 <use ../img/notionlistesdestaches.png>
 Package pdftex.def Info: ../img/notionlistesdestaches.png  used on input line 2
-10.
+14.
 (pdftex.def)             Requested size: 414.20364pt x 183.38786pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 211.
+(caption)                particular \caption on input line 215.
 See the caption package documentation for explanation.
 
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 214.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 218.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 214.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 218.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -725,21 +725,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <../img/schemaNet.png, id=208, 400.49625pt x 154.32657pt>
 File: ../img/schemaNet.png Graphic file (type png)
 <use ../img/schemaNet.png>
-Package pdftex.def Info: ../img/schemaNet.png  used on input line 224.
+Package pdftex.def Info: ../img/schemaNet.png  used on input line 228.
 (pdftex.def)             Requested size: 400.49527pt x 154.32617pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 225.
+(caption)                particular \caption on input line 229.
 See the caption package documentation for explanation.
 
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 236.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 240.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 236.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 240.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -750,42 +750,42 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-12.24728pt}.
 
 [9 <../img/schemaNet.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 245--256
+Underfull \hbox (badness 10000) in paragraph at lines 249--260
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 245--256
+Underfull \hbox (badness 10000) in paragraph at lines 249--260
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 258--260
+Underfull \hbox (badness 10000) in paragraph at lines 262--264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 258--260
+Underfull \hbox (badness 10000) in paragraph at lines 262--264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--291
+Underfull \hbox (badness 10000) in paragraph at lines 288--295
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--291
+Underfull \hbox (badness 10000) in paragraph at lines 288--295
 
  []
 
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 291.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 295.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 291.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 295.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -796,27 +796,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-12.24728pt}.
 
 [10]
-Overfull \hbox (14.63138pt too wide) in paragraph at lines 292--300
+Overfull \hbox (14.63138pt too wide) in paragraph at lines 296--304
 [] 
  []
 
 <../img/montage_piezo_aop.jpg, id=221, 4015.0pt x 2258.4375pt>
 File: ../img/montage_piezo_aop.jpg Graphic file (type jpg)
 <use ../img/montage_piezo_aop.jpg>
-Package pdftex.def Info: ../img/montage_piezo_aop.jpg  used on input line 317.
+Package pdftex.def Info: ../img/montage_piezo_aop.jpg  used on input line 321.
 (pdftex.def)             Requested size: 321.20656pt x 180.6787pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 318.
+(caption)                particular \caption on input line 322.
 See the caption package documentation for explanation.
 
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 318.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 322.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 318.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 322.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -830,33 +830,33 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <../img/sortie_osciloscope.jpg, id=227, 4015.0pt x 2258.4375pt>
 File: ../img/sortie_osciloscope.jpg Graphic file (type jpg)
 <use ../img/sortie_osciloscope.jpg>
-Package pdftex.def Info: ../img/sortie_osciloscope.jpg  used on input line 320.
+Package pdftex.def Info: ../img/sortie_osciloscope.jpg  used on input line 324.
 
 (pdftex.def)             Requested size: 321.20656pt x 180.6787pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 321.
+(caption)                particular \caption on input line 325.
 See the caption package documentation for explanation.
 
 <../img/instrumentation2aop_bb.png, id=230, 561.297pt x 208.78pt>
 File: ../img/instrumentation2aop_bb.png Graphic file (type png)
 <use ../img/instrumentation2aop_bb.png>
 Package pdftex.def Info: ../img/instrumentation2aop_bb.png  used on input line 
-333.
+337.
 (pdftex.def)             Requested size: 449.03821pt x 167.0242pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 334.
+(caption)                particular \caption on input line 338.
 See the caption package documentation for explanation.
 
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 334.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 338.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 334.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 338.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -871,36 +871,36 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 File: ../img/instrumentation3aop_bb.png Graphic file (type png)
 <use ../img/instrumentation3aop_bb.png>
 Package pdftex.def Info: ../img/instrumentation3aop_bb.png  used on input line 
-339.
+343.
 (pdftex.def)             Requested size: 469.75386pt x 170.23557pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 340.
+(caption)                particular \caption on input line 344.
 See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 347--350
+Underfull \hbox (badness 10000) in paragraph at lines 351--354
 
  []
 
 <../img/mtgfinal.png, id=243, 539.616pt x 170.236pt>
 File: ../img/mtgfinal.png Graphic file (type png)
 <use ../img/mtgfinal.png>
-Package pdftex.def Info: ../img/mtgfinal.png  used on input line 351.
+Package pdftex.def Info: ../img/mtgfinal.png  used on input line 355.
 (pdftex.def)             Requested size: 458.67577pt x 144.70126pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 352.
+(caption)                particular \caption on input line 356.
 See the caption package documentation for explanation.
 
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 352.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 356.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 352.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 356.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -914,41 +914,41 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <../img/SMG.png, id=254, 953.81343pt x 420.82219pt>
 File: ../img/SMG.png Graphic file (type png)
 <use ../img/SMG.png>
-Package pdftex.def Info: ../img/SMG.png  used on input line 357.
+Package pdftex.def Info: ../img/SMG.png  used on input line 361.
 (pdftex.def)             Requested size: 476.90555pt x 210.41057pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 358.
+(caption)                particular \caption on input line 362.
 See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--362
+Underfull \hbox (badness 10000) in paragraph at lines 365--366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--362
+Underfull \hbox (badness 10000) in paragraph at lines 365--366
 
  []
 
 <../img/plat.jpg, id=258, 741.23077pt x 472.53462pt>
 File: ../img/plat.jpg Graphic file (type jpg)
 <use ../img/plat.jpg>
-Package pdftex.def Info: ../img/plat.jpg  used on input line 376.
+Package pdftex.def Info: ../img/plat.jpg  used on input line 380.
 (pdftex.def)             Requested size: 370.61447pt x 236.26672pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 377.
+(caption)                particular \caption on input line 381.
 See the caption package documentation for explanation.
 
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 377.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 381.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 377.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 381.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -962,31 +962,31 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <../img/frotment.jpg, id=270, 741.23077pt x 472.53462pt>
 File: ../img/frotment.jpg Graphic file (type jpg)
 <use ../img/frotment.jpg>
-Package pdftex.def Info: ../img/frotment.jpg  used on input line 382.
+Package pdftex.def Info: ../img/frotment.jpg  used on input line 386.
 (pdftex.def)             Requested size: 370.61447pt x 236.26672pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 383.
+(caption)                particular \caption on input line 387.
 See the caption package documentation for explanation.
 
 <../img/froty.jpg, id=271, 4015.0pt x 2258.4375pt>
 File: ../img/froty.jpg Graphic file (type jpg)
 <use ../img/froty.jpg>
-Package pdftex.def Info: ../img/froty.jpg  used on input line 388.
+Package pdftex.def Info: ../img/froty.jpg  used on input line 392.
 (pdftex.def)             Requested size: 401.52353pt x 225.85698pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 389.
+(caption)                particular \caption on input line 393.
 See the caption package documentation for explanation.
 
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 389.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 393.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 389.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 393.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -999,11 +999,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [15 <../img/plat.jpg> <../img/frotment.jpg>]
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 393.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 397.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 393.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 397.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 
@@ -1018,21 +1018,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <../img/algorigrame.png, id=283, 124.96687pt x 290.58563pt>
 File: ../img/algorigrame.png Graphic file (type png)
 <use ../img/algorigrame.png>
-Package pdftex.def Info: ../img/algorigrame.png  used on input line 400.
+Package pdftex.def Info: ../img/algorigrame.png  used on input line 404.
 (pdftex.def)             Requested size: 124.96657pt x 290.58492pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 401.
+(caption)                particular \caption on input line 405.
 See the caption package documentation for explanation.
 
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 411.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 415.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 411.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 415.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1045,11 +1045,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [17 <../img/algorigrame.png>]
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 413.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 417.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 413.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 417.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 
@@ -1063,11 +1063,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [18]
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 418.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 422.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 418.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 422.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 
@@ -1084,11 +1084,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 420.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 424.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 420.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 424.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 
@@ -1186,11 +1186,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 AED: lastpage setting LastPage
 File: ../../../logo/SBLlogo.png Graphic file (type png)
 <use ../../../logo/SBLlogo.png>
-Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 422.
+Package pdftex.def Info: ../../../logo/SBLlogo.png  used on input line 426.
 (pdftex.def)             Requested size: 28.45274pt x 19.89725pt.
 File: ../../../logo/IUTlogo.png Graphic file (type png)
 <use ../../../logo/IUTlogo.png>
-Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 422.
+Package pdftex.def Info: ../../../logo/IUTlogo.png  used on input line 426.
 (pdftex.def)             Requested size: 34.14322pt x 17.06566pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1202,7 +1202,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [25] (./rapport_final.aux)
 Package rerunfilecheck Info: File `rapport_final.out' has not changed.
-(rerunfilecheck)             Checksum: 23C712FA56CD937CAAEB38F053086949;3613.
+(rerunfilecheck)             Checksum: BAF47B3275872B2E67DC97B491EC7203;3613.
  ) 
 Here is how much of TeX's memory you used:
  15458 strings out of 478238
@@ -1224,7 +1224,7 @@ ist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf-dist/fonts/type1
 /public/cm-super/sfrm1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-supe
 r/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb>
 </usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb>
-Output written on rapport_final.pdf (25 pages, 17319386 bytes).
+Output written on rapport_final.pdf (25 pages, 17320720 bytes).
 PDF statistics:
  680 PDF objects out of 1000 (max. 8388607)
  593 compressed objects within 6 object streams

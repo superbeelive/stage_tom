@@ -110,7 +110,9 @@
 	\\
 	\LARGE{IBMM}
 	\\
-	\large{\textbf{Institut des Biomolécules Max Mousseron}}
+	\large{Institut des Biomolécules Max Mousseron}
+	\\
+	\large{\textbf{Sujet : Instrumentation d'une ruche connecter}}
 	\\
 	\large{Stagiaire : \textbf{Tom TUELEAU}}
 	\\
@@ -216,11 +218,11 @@ La page "liste des tâches" regroupe toutes les tâches effectuées et à effect
 \newpage
 
 \section{Topologie Réseau}
-Comme nous pourons le voir dans cette partie, le réseau peut être décomposé en plusieurs partie. Le rucher où se trouve SuperBeeLive et donc les caméras et appareil de mesures. Et un serveur de stockage et de traitement au quel nous sommet reliés par deux fibres. 
+Comme nous pourrons le voir dans cette partie, le réseau peut être décomposé en plusieurs parties. Le rucher où se trouve SuperBeeLive et donc les caméras et appareil de mesures, et un serveur de stockage et de traitement auquel nous sommes reliés par deux fibres. 
 \subsection{Ruche}
-Dans le rucher, on peut retrouver deux types d'équipements reliés au réseau. En premier lieu, nous retrouvons 8 caméras ethernet délivrant un flux de 30 ips noir et blanc d'une résolution de 1080 pixels. Le deuxième équipement est le micro-contrôleur récoltant les données des capteurs.  
+Dans le rucher, on peut retrouver deux types d'équipements reliés au réseau. En premier lieu, nous retrouvons 8 caméras ethernet délivrant un flux de 30 image par seconde noir et blanc d'une résolution de 1080 pixels. Le deuxième équipement est le micro-contrôleur récoltant les données des capteurs.  
 \subsection{Interconnexion}
-Comme dit précédemment le système est composé de plusieurs éléments. Tout d'abord, l'Arduino récolte les données et les envoie aux autres composantes. La température et l'humidité sont envoyées via MQTT vers le serveur tandis que les données du piezo sont envoyées via UDP. Une fois traité, ces derniers sont aussi envoyés sur un topic MQTT.
+Comme dit précédemment le système est composé de plusieurs éléments. Tout d'abord, l'Arduino récolte les données et les envoie aux autres composantes. La température et l'humidité sont envoyées via MQTT vers le serveur tandis que les données du piezo sont envoyées via UDP. Une fois traités, ces derniers sont aussi envoyés sur un topic MQTT.
 
 \begin{center}
     \includegraphics[scale=1]{../img/schemaNet.png}
@@ -230,10 +232,10 @@ Comme dit précédemment le système est composé de plusieurs éléments. Tout 
 
 Afin d'envoyer les données du micro-contrôleur vers le serveur, j'ai choisi le protocole MQTT, et ce pour deux raisons. La première est que le projet sera amené à évoluer et contiendra plusieurs capteurs récoltant la même donnée à des endroits différents de la ruche. Ainsi, avec le systéme de topics, on pourra identifier facilement ces différents capteurs. La deuxième est que la solution envisagée pour le site web et la base de données, est trés facilement couplable avec ce protocole. 
 
-\subsubsection{Liaisons UDP}
+\subsubsection{Liaison UDP}
 Afin de transmettre les données du piezo au serveur, j'ai choisi d'effectuer une liaison UDP. J'ai choisi ce protocole car la liaison n'a pas besoin d'accusé de réception. L'Arduino envoie donc sur le serveur les données du piezo.
-Elle seront ensuite traitée et renvoyées à la base de données. 
-Le traitement aurait pu se faire sur l'Arduino mais les calculs étant assez lourds, j'ai préféré les délocaliser sur une machine plus performante. Ainsi, le role du micro-contrôleur est uniquement de récolter et envoyer les données. 
+Elle seront ensuite traitées et renvoyées à la base de données. 
+Le traitement aurait pu se faire sur l'Arduino mais les calculs étant assez lourds, j'ai préféré les délocaliser sur une machine plus performante. Ainsi, le rôle du micro-contrôleur est uniquement de récolter et envoyer les données. 
 
 \newpage
 \section{Electronique}
@@ -246,15 +248,15 @@ Le but de cette section est d'énoncer les possibilités que j'ai trouvées en c
 
 Afin de remplir la mission, le micro-contrôleur doit pouvoir :\\
 \\
-	- Récolter les données des differents capteurs\\
+	- Récolter les données des différents capteurs\\
 	- Envoyer les données via MQTT\\
 	- Mise en place rapide et facile\\
 	\\
 De ces trois critères, j'ai retenu deux solutions possibles. 
 Tout d'abord, un arduino muni d'un shield Ethernet pourrait nous permettre, dans un premier temps, d'avoir un système 
-connecté à internet et simple à mettre en place.
+connecté à Internet et simple à mettre en place.
 Dans un second temps, j'ai pensé à un Esp32 qui permettrait de faire transiter les données en Wifi et qui est plus petit. 
-Étant familiarisé avec les deux solutions, je n'avais pas de préférence. J'ai cependant commencé à travailler sur l'arduino, car j'avais le matériel à disposition.
+Étant familiarisé avec les deux solutions, je n'avais pas de préférence. J'ai cependant commencé à travailler sur l'Arduino, car j'avais le matériel à disposition.
 
 \subsubsection{Capteur de température et d'hygrométrie }
 Pour répondre à ce besoin, j'ai opté pour un Si7021. J'ai fait ce choix, car le capteur était directement à disposition et que je l'avais déjà utilisé. Ces caractéristiques sont les suivantes :\\
@@ -326,10 +328,10 @@ Par la suite j'ai donc cherché comment effectuer une amplification du signal. J
 
 
 \subsubsection{Montages AOP}
-Lors de ce stage, j'ai du faire des recherches quand au dimensionnement d'un montage amplificateur. Ce besoin s'était fait ressentir quand je m'étais rendu compte que le signal émis par le piézo-électrique n'arrivait pas à être capté par l'Arduino.  Dans cette partie, nous verrons tout d'abord le cheminement effectuer afin d'obtenir un montage fonctionnel. 
+Lors de ce stage, j'ai du faire des recherches quand au dimensionnement d'un montage amplificateur. Ce besoin s'était fait ressentir quand je m'étais rendu compte que le signal émis par le piézo-électrique n'arrivait pas à être capté par l'Arduino.  Dans cette partie, nous verrons tout d'abord le cheminement effectué afin d'obtenir un montage fonctionnel. 
 
-Afin d'amplifier, le signal mes encadrant m'ont conseillé de me renseigner sur les montages amplificateur de mesure. Ces montages sont très souvent utilisé afin d’amplifier le signal de sortie d’un capteur ayant une tension trop faible.
-Il existe plusieurs montages amplificateur de mesures. Dans mon cas, j’ai expérimenté 2 d'entre eux. Un utilisant 2 AOP, visible figure \ref{2AOP}, et un second en utilisant 3, visible lui figure \ref{3AOP}. 
+Afin d'amplifier le signal mes encadrants m'ont conseillé de me renseigner sur les montages amplificateur de mesure. Ces montages sont très souvent utilisés afin d’amplifier le signal de sortie d’un capteur ayant une tension trop faible.
+Il existe plusieurs montages amplificateurs de mesures. Dans mon cas, j’ai expérimenté 2 d'entre eux. Un utilisant 2 AOP, visible figure \ref{2AOP}, et un second en utilisant 3, visible lui figure \ref{3AOP}. 
 
 \begin{center}	
 \includegraphics[scale=0.80]{../img/instrumentation2aop_bb.png}
@@ -343,7 +345,7 @@ Il existe plusieurs montages amplificateur de mesures. Dans mon cas, j’ai exp�
 \label{3AOP}
 \end{center}
 
-Aprés avoir réussi à effectuer ce montage, j’ai pu remarquer que la sensibilité du capteur avait diminué. Ceci a eu pour effet de d’empêcher la visualisation d’impulsions créées lors de petits frottements.\\ Ce probleme étant selon moi imputable à 2 éléments. Tout d'abord une erreur de cablage de ma part, ou alors le model d'AOP que j'utilisai ne correspondait pas à cette utilisation. Etant donné que nous cherchons surtout à amplifier les petits signaux, j’ai décidé de changer de montage.
+Aprés avoir réussi à effectuer ce montage, j’ai pu remarquer que la sensibilité du capteur avait diminué. Ceci a eu pour effet d’empêcher la visualisation d’impulsions créées lors de petits frottements.\\ Ce probleme étant selon moi imputable à 2 éléments. Tout d'abord une erreur de cablage de ma part, ou alors le modèle d'AOP que j'utilisais ne correspondait pas à cette utilisation. Etant donné que nous cherchons surtout à amplifier les petits signaux, j’ai décidé de changer de montage.
 
 \subsubsection{Montage final}
 Le piezo-electrique utilisé jusqu’à maintenant était fourni avec un module. Celui-ci ne changeait rien au signal et pour cause, les composants sur lui n’étaient pas totalement connectés. Cependant, après avoir effectué des modifications sur celui-ci, le signal m'a paru beaucoup plus net.
@@ -372,7 +374,7 @@ Enfin, un condensateur se trouvant en sortie de circuit nous permet d’élimine
 Avec le montage vu précédemment, nous obtenons plusieurs résultats probants.
 Tout d'abord, nous pouvons voir figure \ref{VWOMVM} le signal en sortie du montage quand aucun évènement ne se produit.
 Ensuite, figure \ref{F}, nous pouvons voir la réaction après un léger frottement effectué avec un câble visible figure \ref{M}. 
-On peut remarquer toujours sur les signaux un léger signal alternatif à 50Hz. Les tests ayant été faits sur une breadboard, il est possible quelle récupère un signal émis par un appreil de mesure.
+On peut remarquer toujours sur les signaux un léger signal alternatif à 50Hz. Les tests ayant été faits sur une breadboard, il est possible quelle récupère un signal émis par un appareil de mesure.
 
 \begin{center}	
 \includegraphics[scale=0.5]{../img/plat.jpg}
@@ -394,27 +396,27 @@ On peut remarquer toujours sur les signaux un léger signal alternatif à 50Hz. 
 
 \newpage
 \section{Programmation}
-Lors de ce stage j'ai été amené à faire plusieurs programmes. En annexe, vous trouverez tous les codes réalisés. Je vais donc commencer par vous présenter la récolte dés données et l'envoi de celles-ci. Dans une seconde partie, je vous parlerai du traitement des données relatives au piezo. 
+Lors de ce stage j'ai été amené à faire plusieurs programmes. En annexe, vous trouverez tous les codes réalisés. Je vais donc commencer par vous présenter la récolte des données et l'envoi de celles-ci. Dans une seconde partie, je vous parlerai du traitement des données relatives au piezo. 
 
 \subsection{Fonctionnement du programme}
-Le progamme injecté dans l'arduino respecte l'algorigramme figure \ref{ALG}. Dans le programme, j'ai utilisé plusieurs librairies. Tout d'abord la librairie "Ethernet.h" et "EthernetUDP.h"  m'ont repectivement permis d'établir une connexion filiaire via le shield ethernet et de forger des trame UDP facilement. La librairie "PubSubClient.h" me donne accès à des fonctions relatives au protocole MQTT. Enfin, la librairie "AdafruitSi7021.h" me permet de récolter les données du capteur de température et d'humidité.  
+Le progamme injecté dans l'arduino respecte l'algorigramme figure \ref{ALG}. Dans le programme, j'ai utilisé plusieurs librairies. Tout d'abord la librairie "Ethernet.h" et "EthernetUDP.h"  m'ont respectivement permis d'établir une connexion filiaire via le shield Ethernet et de forger des trames UDP facilement. La librairie "PubSubClient.h" me donne accès à des fonctions relatives au protocole MQTT. Enfin, la librairie "AdafruitSi7021.h" me permet de récolter les données du capteur de température et d'humidité.  
 \begin{center}	
 \includegraphics[scale=1]{../img/algorigrame.png}
-\captionof{figure}{Algorigrame}
+\captionof{figure}{Algorigramme}
 \label{ALG}
 \end{center}
 \subsection{Traitement}
 
 Une fois le signal obtenu il fallait l'analyser. J'avais dans un premier temps commencé à traiter les données directement sur l'Arduino en effectuant une transformé de Fourrier du signal.\\ 
-Cependant, les capacités de calcul de l'Arduino étant limitées et ayant observé une certaine lenteur à effectuer cette opération, j'ai décidé d'effectuer le systéme suivant. J'envoie les échantillons à un ordinateur distant qui effectuera le traitement et renvoie le résultat obtenu en MQTT.\\
+Cependant, les capacités de calcul de l'Arduino étant limitées et ayant observé une certaine lenteur à effectuer cette opération, j'ai décidé de réaliser le système suivant. J'envoie les échantillons à un ordinateur distant qui effectuera le traitement et renvoie le résultat obtenu en MQTT.\\
 J'ai donc par la suite écrit un programme utilisant la librairie "fftw". Celle-ci proposant de multiples fonctions bassées sur l'algorithme FFT (Fast Fourier Transform), permettant d'effectuer une transformée de Fourrier sur les signaux numérisés.\\
-La raison pour laquele j'ai decidé de faire une transformée de Fourrier est tout simplement car l'objectif est d'analyser en fréquence notre signal. Etant donné que celui-ci n'est pas périodique, j'ai du employer cette méthode afin de représenter son spectre. Pour être plus précis, j'ai utilisé une transformée de Fourrier discret car nous somme sur un signal échantilloné. 
-Le programme que j'ai écrit pour faire cela est disponible en annexe .  
+La raison pour laquelle j'ai decidé de faire une transformée de Fourrier est tout simplement car l'objectif est d'analyser en fréquence notre signal. Etant donné que celui-ci n'est pas périodique, j'ai du employer cette méthode afin de représenter son spectre. Pour être plus précis, j'ai utilisé une transformée de Fourrier discrete car nous sommes sur un signal échantilloné. 
+Le programme que j'ai écrit pour faire cela est disponible en annexe. 
 
 
 \newpage
 \section{Conclusion}
-En conclusion, ce stage a été formateur pour moi tant dans l'approche que j'ai du mettre en place pour solutionner les problèmes posés, que dans les différents domaines abordé. J'ai cependant rencontré des difficultés sur certaines parties. En effet mes compétences en éléctronique se limitant à des basiques, j'ai abordé des composants compléxes comme l'amplificateur-opérationnel avec certaines difficultés. J'ai cependant pu compter sur l'aide de mes encadrants afin de me diriger vers les bonnes sources d'information.
+En conclusion, ce stage a été formateur pour moi tant dans l'approche que j'ai du mettre en place pour solutionner les problèmes posés, que dans les différents domaines abordé. J'ai cependant rencontré des difficultés sur certaines parties. En effet mes compétences en éléctronique se limitant à des basiques, j'ai abordé des composants complexes comme l'amplificateur opérationnel avec certaines difficultés. J'ai cependant pu compter sur l'aide de mes encadrants afin de me diriger vers les bonnes sources d'information.
 
 
 \newpage

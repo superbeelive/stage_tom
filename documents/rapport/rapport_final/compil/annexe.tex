@@ -1,7 +1,7 @@
 
 \section*{Annexe}
 \subsection*{Code}
-\subsubsection*{Récolte et envoie des données}
+\subsubsection*{Récolte et envoi des données}
 \begin{scriptsize}
 \begin{lstlisting}
 
@@ -83,7 +83,7 @@ int beginEthSen()
 }
 
 
-// Cette fonction recolte et envoie l'humiditer et la température en MQTT. nbVirgule permet de spécifier le nombre de valeur apres la virgule.
+// Cette fonction recolte et envoie l'humidité et la température en MQTT. nbVirgule permet de spécifier le nombre de valeurs apres la virgule.
 void mqttSendHumTmp(int nbVirgule,Adafruit_Si7021 sensor)
 {
 
@@ -111,8 +111,8 @@ void mqttSendHumTmp(int nbVirgule,Adafruit_Si7021 sensor)
 
 void gatherVibration(char * fdata, int nbEchantillon, int nbVirgule, double periodeEchantillonageMs)
 {
-	// Afin d'avoire le nombre de caractere je fait le nombre de chiffre apres la virgule plus deux
-	// qui represente mon premier digits et ma virgule.
+	// Afin d'avoir le nombre de caractere je fais le nombre de chiffres apres la virgule plus deux
+	// qui represente mon premier digit et ma virgule.
 	int nbChar = nbVirgule+2;
 	char tmp[nbEchantillon][nbChar];
 	char data2[nbEchantillon*nbChar];
@@ -141,7 +141,7 @@ void callback(char* topic, byte* payload, unsigned int length){
 }
 \end{lstlisting}
 \end{scriptsize} 
-\subsubsection*{Transformer de fourrier}
+\subsubsection*{Transformmer de Fourrier}
 \begin{scriptsize}
 \begin{lstlisting}
 
