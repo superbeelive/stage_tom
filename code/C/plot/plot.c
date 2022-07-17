@@ -26,7 +26,8 @@ int main (){
 	char buffer[MAXLINE];
 	struct sockaddr_in servaddr, cliaddr;
 	double data[echantillon];
-	double fft[echantillon];
+	fftw_complex *fft;
+	fft = (fftw_complex*) fftw_malloc(sizeof(fftw_complex)*echantillon);
 	if(stat("graph",&st)== -1){
 		mkdir("graph", 0700);
 	}
@@ -86,12 +87,12 @@ void writeData(char * title, double * valeurs, int taille){
 	fclose(f);
 }
 
-void fftSig(double * valeurs, double * fft, int N){
+void fftSig(double * valeurs, fftw_complex * fft, int N){
 	int i;
 	double * values = NULL ;
 	values = (double *)malloc(sizeof(double)*N);
 	fftw_plan p;
-	p = fftw_plan_r2r_1d(N,values,fft,FFTW_HC2R,FFTW_MEASURE);
+	p = fftw_plan_dft_r2c(N,values,fft,FFTW_HC2R,FFTW_MEASURE);
 	
 	for(i=0;i<20;i++){
 			values[i]=valeurs[i];
@@ -99,9 +100,10 @@ void fftSig(double * valeurs, double * fft, int N){
 	
 	fftw_execute(p);
 	for(i=0;i<20;i++){
-			printf("%f ",fft[i]);
+			printf("reel : %f complexe : i %f ",fft[i][0], fft[i][1]);
 	}
 	printf("\n");
+	fftw_clean_plan(p);
 	fftw_destroy_plan(p);
 	free(values);	
 
